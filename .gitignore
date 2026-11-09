@@ -1,0 +1,6 @@
+node_modules/
+__pycache__/
+.venv/
+.streamlit/secrets.toml
+*.png
+.DS_Store

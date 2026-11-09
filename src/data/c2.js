@@ -1,0 +1,323 @@
+window.COURSE_DATA.push({
+id:'C2',name:'Mastery',
+canDo:'Understand virtually everything heard or read. Summarise information from different sources, reconstructing arguments coherently. Express yourself spontaneously, very fluently and precisely, differentiating finer shades of meaning even in complex situations.',
+scaffold:'C2 is not taught, it is noticed. These five units collect the things that still separate a very good speaker from a native: proverbs, nuance words, false friends, specialist registers and grammar traps. Each has a parallel reading written at native level.',
+units:[
+/* ================= C2-01 ================= */
+{id:'c2-01',title:'Proverbs & cultural shorthand',icon:'🪶',
+intro:'Sayings that natives half-quote. Knowing them lets you catch the allusion when only the first half is said. Each pair is the nearest equivalent, not a literal translation.',
+vocab:[
+{en:'Better late than never.',pt:'Mais vale tarde do que nunca.',de:'Besser spät als nie.',icon:'⏰'},
+{en:'The early bird catches the worm.',pt:'Deus ajuda quem cedo madruga.',de:'Morgenstund hat Gold im Mund.',icon:'🐦'},
+{en:'Don’t count your chickens before they hatch.',pt:'Não contes com o ovo no cu da galinha.',de:'Man soll den Tag nicht vor dem Abend loben.',icon:'🥚',note:'PT: the Portuguese version is earthy; use with friends.'},
+{en:'Practice makes perfect.',pt:'A prática faz a perfeição. / Água mole em pedra dura…',de:'Übung macht den Meister.',icon:'🎯'},
+{en:'All that glitters is not gold.',pt:'Nem tudo o que luz é ouro.',de:'Es ist nicht alles Gold, was glänzt.',icon:'✨'},
+{en:'When in Rome, do as the Romans do.',pt:'Em Roma, sê romano.',de:'Andere Länder, andere Sitten.',icon:'🏛️'},
+{en:'Birds of a feather flock together.',pt:'Diz-me com quem andas, dir-te-ei quem és.',de:'Gleich und gleich gesellt sich gern.',icon:'🐦‍⬛'},
+{en:'A bird in the hand is worth two in the bush.',pt:'Mais vale um pássaro na mão do que dois a voar.',de:'Der Spatz in der Hand ist besser als die Taube auf dem Dach.',icon:'🕊️'},
+{en:'Every cloud has a silver lining.',pt:'Há males que vêm por bem.',de:'Jedes Unglück hat auch sein Gutes.',icon:'🌤️'},
+{en:'Out of sight, out of mind.',pt:'Longe da vista, longe do coração.',de:'Aus den Augen, aus dem Sinn.',icon:'👁️'},
+{en:'Once bitten, twice shy.',pt:'Gato escaldado de água fria tem medo.',de:'Ein gebranntes Kind scheut das Feuer.',icon:'🐈'},
+{en:'The apple doesn’t fall far from the tree.',pt:'Filho de peixe sabe nadar.',de:'Der Apfel fällt nicht weit vom Stamm.',icon:'🍎'},
+{en:'Don’t look a gift horse in the mouth.',pt:'A cavalo dado não se olha o dente.',de:'Einem geschenkten Gaul schaut man nicht ins Maul.',icon:'🐴'},
+{en:'Too many cooks spoil the broth.',pt:'Muitos cozinheiros estragam a sopa.',de:'Viele Köche verderben den Brei.',icon:'🍲'},
+{en:'He who laughs last laughs longest.',pt:'Quem ri por último ri melhor.',de:'Wer zuletzt lacht, lacht am besten.',icon:'😂'},
+{en:'There’s no smoke without fire.',pt:'Onde há fumo há fogo.',de:'Wo Rauch ist, ist auch Feuer.',icon:'🔥'},
+{en:'Slow and steady wins the race.',pt:'Devagar se vai ao longe.',de:'Eile mit Weile.',icon:'🐢'},
+{en:'What goes around comes around.',pt:'Cá se fazem, cá se pagam.',de:'Wie man in den Wald hineinruft, so schallt es heraus.',icon:'🔁'},
+{en:'Honesty is the best policy.',pt:'A verdade vem sempre ao de cima.',de:'Ehrlich währt am längsten.',icon:'🤝'},
+{en:'Rome wasn’t built in a day.',pt:'Roma e Pavia não se fizeram num dia.',de:'Rom wurde auch nicht an einem Tag erbaut.',icon:'🏗️'},
+{en:'It never rains but it pours.',pt:'Desgraça pouca é tolice.',de:'Ein Unglück kommt selten allein.',icon:'🌧️'},
+{en:'You can’t have your cake and eat it.',pt:'Não se pode ter sol na eira e chuva no nabal.',de:'Man kann nicht auf zwei Hochzeiten tanzen.',icon:'🍰'}
+],
+phrases:[
+{en:'Well, better late than never, I suppose.',pt:'Enfim, mais vale tarde do que nunca.',de:'Na ja, besser spät als nie.'},
+{en:'As my grandmother used to say: slow and steady.',pt:'Como dizia a minha avó: devagar se vai ao longe.',de:'Wie meine Oma immer sagte: Eile mit Weile.'},
+{en:'Don’t count your chickens; the contract isn’t signed yet.',pt:'Não cantes vitória antes do tempo; o contrato ainda não está assinado.',de:'Lob den Tag nicht vor dem Abend; der Vertrag ist noch nicht unterschrieben.'},
+{en:'There you go, the apple doesn’t fall far from the tree.',pt:'Pois, filho de peixe sabe nadar.',de:'Tja, der Apfel fällt nicht weit vom Stamm.'}
+],
+grammar:[
+{title:'Proverb grammar: archaic forms worth recognising',en:'Proverbs preserve old grammar. Portuguese ones keep the future subjunctive, inverted word order and “mais vale”; German ones keep old datives, dropped articles and poetic inversion.',
+pt:'Quem não arrisca, não petisca (relative quem with no antecedent). Mais vale X do que Y (vale = is worth, inverted). Água mole em pedra dura tanto bate até que fura (até que + indicative, archaic). Dir-te-ei (mesóclise).',
+de:'Morgenstund (dropped -e), hat Gold im Mund. Wer A sagt, muss auch B sagen (wer = whoever). Einem geschenkten Gaul (dative without preposition). Eile mit Weile (imperative + archaic noun). Es ist nicht alles Gold, was glänzt (was as relative after alles).',
+examples:[
+{en:'Whoever doesn’t risk, doesn’t win.',pt:'[Quem] não arrisca, não petisca.',de:'[Wer] nicht wagt, der nicht gewinnt.'},
+{en:'Better a bird in the hand.',pt:'[Mais] vale um pássaro na mão.',de:'[Besser] der Spatz in der Hand.'},
+{en:'Tell me who you go with and I will tell you who you are.',pt:'Diz-me com quem andas, [dir-te-ei] quem és.',de:'Sag mir, mit wem du gehst, und ich [sage] dir, wer du bist.'},
+{en:'Whoever says A must also say B.',pt:'Quem diz A tem de dizer [B].',de:'Wer A sagt, muss auch [B] sagen.'}
+]},
+{title:'Half-quoting: how natives use proverbs',en:'Natives rarely say the whole proverb. They say the first half and let the listener finish it, or they twist it for humour. Recognising the opening is what matters.',
+pt:'“Quem não arrisca…” (…não petisca). “Mais vale tarde…” (…do que nunca). “Água mole…” (…em pedra dura). “Gato escaldado…” (…de água fria tem medo). Twists: “Mais vale um pássaro na mão do que… bem, tu sabes.”',
+de:'“Wer A sagt…” (…muss auch B sagen). “Morgenstund…” (…hat Gold im Mund). “Aus den Augen…” (…aus dem Sinn). “Der Apfel fällt…” (…nicht weit vom Stamm). Twists: “Viele Köche… na, du weißt schon.”',
+examples:[
+{en:'Well, he who doesn’t risk…',pt:'Pois, quem não [arrisca]…',de:'Tja, wer nicht [wagt]…'},
+{en:'Out of sight… you know.',pt:'Longe da [vista]… tu sabes.',de:'Aus den [Augen]… du weißt schon.'},
+{en:'The early bird, as they say.',pt:'Deus ajuda quem cedo [madruga], como se diz.',de:'[Morgenstund] und so weiter, wie man sagt.'}
+]}
+],
+reading:{title:'Grandmothers’ wisdom',intro:'A short reflective text built around proverbs.',
+en:'My grandmother in Sintra had a proverb for everything, and most of them were about patience. If I complained that something was taking too long, she said that one goes far by going slowly. If I boasted before the result was in, she warned me not to count the egg before the hen had laid it, in a version too rude to print. If a plan collapsed, she shrugged: some evils come for the good.\nMy girlfriend’s grandmother in Lower Saxony kept the same philosophy in a different accent. Her favourite was that one should not praise the day before the evening, which she applied equally to weather, football and my attempts to bake. When I finally produced an edible loaf, she said that practice makes the master, and when the next one failed she said that no master has ever fallen from the sky.\nThe two women never met and would not have understood a word of each other. They would have agreed about everything.',
+pt:'A minha avó, em Sintra, tinha um provérbio para tudo, e a maioria era sobre paciência. Se eu me queixava de que uma coisa demorava demais, dizia que devagar se vai ao longe. Se eu cantava vitória antes do resultado, avisava-me para não contar com o ovo antes de a galinha o pôr, numa versão demasiado malcriada para se imprimir. Se um plano se desmoronava, encolhia os ombros: há males que vêm por bem.\nA avó da minha namorada, na Baixa Saxónia, guardava a mesma filosofia com outro sotaque. A preferida dela era que não se deve louvar o dia antes da noite, o que aplicava por igual ao tempo, ao futebol e às minhas tentativas de fazer pão. Quando finalmente produzi um pão comestível, disse que a prática faz o mestre, e quando o seguinte falhou disse que nenhum mestre caiu ainda do céu.\nAs duas mulheres nunca se conheceram e não teriam percebido uma palavra uma da outra. Teriam concordado em tudo.',
+de:'Meine Großmutter in Sintra hatte für alles ein Sprichwort, und die meisten handelten von Geduld. Wenn ich mich beschwerte, dass etwas zu lange dauerte, sagte sie, langsam komme man weit. Wenn ich prahlte, bevor das Ergebnis feststand, warnte sie mich, das Ei nicht zu zählen, bevor die Henne es gelegt habe, in einer Fassung, die zu derb zum Abdrucken ist. Wenn ein Plan zusammenbrach, zuckte sie mit den Schultern: Manches Übel komme zum Guten.\nDie Großmutter meiner Freundin in Niedersachsen pflegte dieselbe Philosophie mit anderem Akzent. Ihr Lieblingsspruch war, man solle den Tag nicht vor dem Abend loben, was sie gleichermaßen auf das Wetter, den Fußball und meine Backversuche anwandte. Als ich endlich ein essbares Brot zustande brachte, sagte sie, Übung mache den Meister, und als das nächste misslang, sagte sie, es sei noch kein Meister vom Himmel gefallen.\nDie beiden Frauen sind sich nie begegnet und hätten kein Wort voneinander verstanden. Sie wären sich in allem einig gewesen.',
+questions:['Which proverb does each grandmother use for patience?','Note the German Konjunktiv I in the reported proverbs (komme, habe, mache, sei). What does Portuguese use instead?']}},
+
+/* ================= C2-02 ================= */
+{id:'c2-02',title:'Nuance, hedging & persuasion',icon:'🎯',
+intro:'The vocabulary of fine distinction: words that mark degree, stance and certainty. Press German lives on Konjunktiv I for attribution; written Portuguese on a precise set of adverbs and the stylistic subjunctive.',
+vocab:[
+{en:'arguably',pt:'possivelmente / pode dizer-se que',de:'wohl / man könnte sagen',icon:'🤔'},
+{en:'allegedly',pt:'alegadamente',de:'angeblich / mutmaßlich',icon:'🕵️'},
+{en:'supposedly',pt:'supostamente',de:'vermeintlich / angeblich',icon:'🎭'},
+{en:'admittedly',pt:'é certo que / reconheça-se que',de:'zugegebenermaßen / zwar',icon:'🫳'},
+{en:'to some extent',pt:'até certo ponto',de:'bis zu einem gewissen Grad',icon:'📏'},
+{en:'by and large',pt:'de um modo geral / grosso modo',de:'im Großen und Ganzen',icon:'🌐'},
+{en:'strictly speaking',pt:'em rigor / a rigor',de:'streng genommen',icon:'📐'},
+{en:'so to speak',pt:'por assim dizer',de:'sozusagen',icon:'💬'},
+{en:'if anything',pt:'quando muito / se tanto',de:'wenn überhaupt / eher',icon:'⚖️'},
+{en:'at best / at worst',pt:'na melhor das hipóteses / na pior das hipóteses',de:'bestenfalls / schlimmstenfalls',icon:'🎲'},
+{en:'notably',pt:'nomeadamente',de:'insbesondere / namentlich',icon:'📌',note:'PT: nomeadamente is very frequent in European Portuguese formal prose.'},
+{en:'namely',pt:'a saber / isto é',de:'nämlich / und zwar',icon:'🔎'},
+{en:'nonetheless',pt:'não obstante',de:'gleichwohl / nichtsdestoweniger',icon:'🧱'},
+{en:'conversely',pt:'inversamente / pelo contrário',de:'umgekehrt',icon:'🔄'},
+{en:'to downplay',pt:'desvalorizar / minimizar',de:'herunterspielen',icon:'🔉'},
+{en:'to overstate',pt:'exagerar / empolar',de:'überbewerten / aufbauschen',icon:'🔊'},
+{en:'to imply',pt:'dar a entender / implicar',de:'andeuten / implizieren',icon:'👉'},
+{en:'to concede',pt:'conceder / admitir',de:'einräumen',icon:'🤝'},
+{en:'to insist',pt:'insistir',de:'bestehen auf / beharren auf',icon:'✊'},
+{en:'subtle',pt:'subtil',de:'subtil / fein',icon:'🪡'},
+{en:'blunt',pt:'frontal / direto',de:'unverblümt / direkt',icon:'🔨'},
+{en:'tactful',pt:'diplomático / com tato',de:'taktvoll',icon:'🕊️'},
+{en:'misleading',pt:'enganador / enganoso',de:'irreführend',icon:'🪤'},
+{en:'compelling',pt:'convincente / contundente',de:'überzeugend / zwingend',icon:'🎯'}
+],
+phrases:[
+{en:'Strictly speaking, that isn’t a lie, but it is misleading.',pt:'Em rigor, não é mentira, mas é enganador.',de:'Streng genommen ist das keine Lüge, aber es ist irreführend.'},
+{en:'Admittedly, the data is thin; nonetheless the trend is clear.',pt:'É certo que os dados são escassos; não obstante, a tendência é clara.',de:'Zugegebenermaßen sind die Daten dünn; gleichwohl ist der Trend eindeutig.'},
+{en:'The minister allegedly knew about it in March.',pt:'O ministro terá sabido disso em março.',de:'Der Minister soll bereits im März davon gewusst haben.',note:'PT: the future perfect (terá sabido) marks hearsay. DE: sollen marks hearsay.'},
+{en:'If anything, the problem is getting worse.',pt:'Quando muito, o problema está a piorar.',de:'Wenn überhaupt, wird das Problem eher schlimmer.'},
+{en:'I would gently suggest a different approach.',pt:'Permitia-me sugerir uma abordagem diferente.',de:'Ich würde vorsichtig eine andere Herangehensweise vorschlagen.'}
+],
+grammar:[
+{title:'Marking hearsay: sollen / Konjunktiv I (DE) and the future of supposition (PT)',en:'How to report a claim without endorsing it. German press uses Konjunktiv I (er sei, er habe, er komme) and the modal sollen (= is said to). Portuguese uses the future and future perfect for supposition (será, terá sido) and adverbs like alegadamente.',
+pt:'Supposition: Ele terá sabido em março (he allegedly knew). Serão cerca de mil pessoas (there must be about a thousand). Conditional for the past: Teria sido um erro (it would reportedly have been a mistake). Segundo fontes, o governo pretende… Alegadamente, …',
+de:'Konjunktiv I: Der Minister sagte, er habe nichts gewusst. Die Firma teilte mit, sie werde investieren. sollen: Der Minister soll davon gewusst haben. wollen (claims about oneself): Er will nichts gewusst haben (he claims not to have known). angeblich, mutmaßlich.',
+examples:[
+{en:'The minister is said to have known.',pt:'O ministro [terá] sabido.',de:'Der Minister [soll] gewusst haben.'},
+{en:'He claims he knew nothing.',pt:'Ele [alega] não ter sabido nada.',de:'Er [will] nichts gewusst haben.'},
+{en:'The company said it would invest.',pt:'A empresa disse que [iria] investir.',de:'Die Firma sagte, sie [werde] investieren.'},
+{en:'There must be about a thousand people.',pt:'[Serão] umas mil pessoas.',de:'Es [dürften] etwa tausend Leute sein.'},
+{en:'She said she was tired. (press)',pt:'Ela disse que [estava] cansada.',de:'Sie sagte, sie [sei] müde.'}
+]},
+{title:'Degree and stance adverbs: placement and weight',en:'Hedges and intensifiers change force by position. In German, sentence adverbs (wohl, zwar, eben, allerdings) sit in the middle field after the verb; in Portuguese, adverbs in -mente and set phrases typically open the sentence or follow the verb.',
+pt:'Possivelmente, o acordo será assinado. O acordo será, possivelmente, assinado (parenthetical, more formal). Quando muito, dois dias. Até certo ponto, concordo. Grosso modo, é isso.',
+de:'Das Abkommen wird wohl unterzeichnet (wohl = probably, after the verb). Es ist zwar teuer, aber gut. Das stimmt allerdings nur bedingt. Bestenfalls zwei Tage. Bis zu einem gewissen Grad stimme ich zu.',
+examples:[
+{en:'The deal will probably be signed.',pt:'O acordo [será] possivelmente assinado.',de:'Das Abkommen wird [wohl] unterzeichnet.'},
+{en:'That is only partly true.',pt:'Isso só é verdade [até] certo ponto.',de:'Das stimmt [allerdings] nur bedingt.'},
+{en:'At best, two days.',pt:'[Quando] muito, dois dias.',de:'[Bestenfalls] zwei Tage.'},
+{en:'By and large, I agree.',pt:'[De] um modo geral, concordo.',de:'Im [Großen] und Ganzen stimme ich zu.'}
+]}
+],
+reading:{title:'Editorial: on a leaked memo',intro:'A newspaper-style opinion piece. Watch the hedging and attribution.',
+en:'The memo that reached this newspaper on Tuesday is, strictly speaking, not evidence of anything. It is three pages of internal reasoning, undated, unsigned, and written in the hedged dialect of people who expect to be quoted later. Its author, who is said to be a senior adviser, appears to recommend delaying the announcement until after the regional elections. The ministry has not denied that the document is genuine; it has merely insisted that no decision was taken on that basis.\nThat may well be true. By and large, governments postpone unwelcome news whenever they can, and a memo suggesting they do so is hardly a scandal. What is harder to downplay is the timing. If, as the adviser allegedly wrote, the figures were available in March, then the public was told in June something the ministry had known for three months.\nAdmittedly, a draft is not a policy. Nonetheless, the ministry would do well to publish the full document rather than let it leak in pieces. If anything, the silence is doing more damage than the memo.',
+pt:'O memorando que chegou a este jornal na terça-feira não é, em rigor, prova de coisa alguma. São três páginas de raciocínio interno, sem data, sem assinatura, escritas no dialeto cauteloso de quem conta vir a ser citado. O autor, que será um assessor sénior, parece recomendar que o anúncio seja adiado para depois das eleições regionais. O ministério não negou que o documento seja autêntico; limitou-se a insistir que nenhuma decisão foi tomada com base nele.\nPode bem ser verdade. De um modo geral, os governos adiam as más notícias sempre que podem, e um memorando a sugerir que o façam dificilmente é um escândalo. Mais difícil de desvalorizar é o momento. Se, como o assessor alegadamente escreveu, os números estavam disponíveis em março, então o público foi informado em junho de algo que o ministério sabia há três meses.\nÉ certo que um rascunho não é uma política. Não obstante, o ministério faria bem em publicar o documento completo em vez de o deixar sair aos bocados. Quando muito, o silêncio está a fazer mais estragos do que o memorando.',
+de:'Das Memo, das diese Zeitung am Dienstag erreichte, ist streng genommen kein Beweis für irgendetwas. Es sind drei Seiten interner Überlegungen, undatiert, nicht unterschrieben und verfasst im vorsichtigen Dialekt von Leuten, die damit rechnen, später zitiert zu werden. Der Verfasser, bei dem es sich um einen ranghohen Berater handeln soll, scheint zu empfehlen, die Ankündigung bis nach den Regionalwahlen zu verschieben. Das Ministerium hat nicht bestritten, dass das Dokument echt ist; es hat lediglich darauf beharrt, auf dieser Grundlage sei keine Entscheidung getroffen worden.\nDas mag durchaus stimmen. Im Großen und Ganzen schieben Regierungen unangenehme Nachrichten auf, wann immer sie können, und ein Memo, das genau dies vorschlägt, ist kaum ein Skandal. Schwerer herunterzuspielen ist der Zeitpunkt. Wenn die Zahlen, wie der Berater angeblich schrieb, bereits im März vorlagen, dann erfuhr die Öffentlichkeit im Juni etwas, was das Ministerium seit drei Monaten wusste.\nZugegebenermaßen ist ein Entwurf noch keine Politik. Gleichwohl täte das Ministerium gut daran, das vollständige Dokument zu veröffentlichen, statt es stückweise durchsickern zu lassen. Wenn überhaupt, richtet das Schweigen mehr Schaden an als das Memo.',
+questions:['Find three hedges in the first paragraph of your target language.','How does each language render “is said to be a senior adviser”?','Which sentence contains the conditional accusation, and how is it softened?']}},
+
+/* ================= C2-03 ================= */
+{id:'c2-03',title:'False friends & word formation',icon:'🪞',
+intro:'Words that look alike across the three languages and mean different things, plus the prefixes and suffixes that let you guess new words correctly.',
+vocab:[
+{en:'false friend',pt:'o falso amigo / o falso cognato',de:'der falsche Freund',icon:'🎭',pos:'noun'},
+{en:'gift (EN) ≠ Gift (DE: poison)',pt:'a prenda / o veneno',de:'das Geschenk / das Gift',icon:'☠️',note:'DE Gift = poison. English gift = Geschenk.'},
+{en:'actual (EN) ≠ aktuell (DE: current) ≠ atual (PT: current)',pt:'real, verdadeiro / atual',de:'tatsächlich / aktuell',icon:'📅',note:'Both DE and PT use the word for “current”; English “actual” = tatsächlich / real.'},
+{en:'eventually (EN) ≠ eventuell (DE: possibly) ≠ eventualmente (PT: possibly)',pt:'por fim / eventualmente',de:'schließlich / eventuell',icon:'🎲',note:'A triple trap: in DE and PT the word means “possibly”.'},
+{en:'sensible (EN) ≠ sensibel (DE: sensitive) ≠ sensível (PT: sensitive)',pt:'sensato / sensível',de:'vernünftig / sensibel',icon:'🧠'},
+{en:'sympathetic (EN) ≠ sympathisch (DE: likeable) ≠ simpático (PT: nice)',pt:'compreensivo / simpático',de:'mitfühlend / sympathisch',icon:'😊'},
+{en:'pretend (EN) ≠ pretender (PT: to intend)',pt:'fingir / pretender',de:'so tun als ob / beabsichtigen',icon:'🎭'},
+{en:'library (EN) ≠ livraria (PT: bookshop)',pt:'a biblioteca / a livraria',de:'die Bibliothek / die Buchhandlung',icon:'📚'},
+{en:'parents (EN) ≠ parentes (PT: relatives)',pt:'os pais / os parentes',de:'die Eltern / die Verwandten',icon:'👨‍👩‍👧'},
+{en:'constipated (EN) ≠ constipado (PT: having a cold)',pt:'com prisão de ventre / constipado',de:'verstopft / erkältet',icon:'🤧'},
+{en:'exquisite (EN) ≠ esquisito (PT: weird)',pt:'requintado / esquisito',de:'erlesen / seltsam',icon:'🧐'},
+{en:'chef (EN) ≠ Chef (DE: boss)',pt:'o cozinheiro-chefe / o chefe',de:'der Küchenchef / der Chef',icon:'👨‍🍳'},
+{en:'become (EN) ≠ bekommen (DE: to get)',pt:'tornar-se / receber',de:'werden / bekommen',icon:'🔄'},
+{en:'brave (EN) ≠ brav (DE: well-behaved)',pt:'corajoso / bem-comportado',de:'mutig / brav',icon:'🦁'},
+{en:'fast (EN) ≠ fast (DE: almost)',pt:'rápido / quase',de:'schnell / fast',icon:'⚡'},
+{en:'rat (EN) ≠ Rat (DE: advice, council)',pt:'a ratazana / o conselho',de:'die Ratte / der Rat',icon:'🐀'},
+{en:'to notice (EN) ≠ notieren (DE: to note down)',pt:'reparar / anotar',de:'bemerken / notieren',icon:'📝'},
+{en:'prefix: un- / in- / des- (negation)',pt:'in-, des-: infeliz, desonesto',de:'un-: unglücklich, unehrlich',icon:'🚫'},
+{en:'prefix: re- / wieder- (again)',pt:'re-: refazer, reler',de:'wieder-: wiederholen, wiedersehen',icon:'🔁'},
+{en:'suffix: -ness / -dade / -heit, -keit',pt:'-dade: felicidade, liberdade',de:'-heit / -keit: Freiheit, Möglichkeit',icon:'🏷️'},
+{en:'suffix: -tion / -ção / -ung',pt:'-ção: informação, decisão',de:'-ung: Entscheidung, Bedeutung',icon:'⚙️'},
+{en:'suffix: -able / -vel / -bar',pt:'-vel: possível, confiável',de:'-bar: machbar, lesbar',icon:'✅'},
+{en:'suffix: -less / sem / -los',pt:'sem: sem sentido, sem esperança',de:'-los: sinnlos, hoffnungslos',icon:'🕳️'},
+{en:'compound nouns',pt:'(rare: guarda-chuva, fim de semana)',de:'(constant: Regenschirm, Wochenende, Handschuh)',icon:'🧩',note:'German builds new nouns by stacking; Portuguese uses de-phrases.'}
+],
+phrases:[
+{en:'That’s poison, not a gift!',pt:'Isso é veneno, não é uma prenda!',de:'Das ist Gift, kein Geschenk!'},
+{en:'I’m constipado, I mean I have a cold.',pt:'Estou constipado, isto é, tenho uma constipação.',de:'Ich bin erkältet, nicht verstopft.'},
+{en:'She is sensible, not sensitive.',pt:'Ela é sensata, não sensível.',de:'Sie ist vernünftig, nicht sensibel.'},
+{en:'The current figures, not the actual ones.',pt:'Os números atuais, não os reais.',de:'Die aktuellen Zahlen, nicht die tatsächlichen.'},
+{en:'Possibly, but not eventually.',pt:'Eventualmente sim, mas não por fim.',de:'Eventuell ja, aber nicht schließlich.'}
+],
+grammar:[
+{title:'Guessing new words: productive affixes across the three languages',en:'Most abstract vocabulary is built from a few hundred roots and a handful of affixes. Map the affixes once and you can decode thousands of words.',
+pt:'-ção (action/result), -dade (quality), -mento (process), -eiro/-eira (person/tree/container), -vel (able), -oso (full of), in-/im-/des- (not/undo), re- (again), sobre- (over), sub- (under).',
+de:'-ung (action/result), -heit/-keit (quality), -schaft (collective), -er/-erin (person), -bar (able), -ig/-lich (adjective), un- (not), ver-/zer- (change/destroy), wieder- (again), über- (over), unter- (under). All -ung, -heit, -keit, -schaft nouns are feminine.',
+examples:[
+{en:'readable',pt:'[legível]',de:'[lesbar]'},
+{en:'freedom',pt:'a [liberdade]',de:'die [Freiheit]'},
+{en:'unhappy',pt:'[infeliz]',de:'[unglücklich]'},
+{en:'to rewrite',pt:'[reescrever]',de:'[umschreiben] / neu schreiben'},
+{en:'decision',pt:'a [decisão]',de:'die [Entscheidung]'},
+{en:'hopeless',pt:'[sem] esperança',de:'[hoffnungslos]'}
+]},
+{title:'Decoding German compounds and Portuguese de-chains',en:'A German compound is read from right to left: the last element is the head and sets gender; everything before it modifies. Portuguese expresses the same with noun + de + noun, read left to right.',
+pt:'o seguro de saúde (health insurance), a máquina de lavar roupa (washing machine), o centro de distribuição (distribution centre), o número de identificação fiscal.',
+de:'die Krankenversicherung (Kranken + Versicherung: head = Versicherung, feminine), die Waschmaschine, das Verteilzentrum, die Steueridentifikationsnummer. Linking -s-, -n-, -en-, -er- may appear: Arbeitszeit, Sonnenbrille, Kindergarten.',
+examples:[
+{en:'health insurance',pt:'o seguro de [saúde]',de:'die [Krankenversicherung]'},
+{en:'washing machine',pt:'a máquina de lavar [roupa]',de:'die [Waschmaschine]'},
+{en:'working hours',pt:'o horário de [trabalho]',de:'die [Arbeitszeit]'},
+{en:'sunglasses',pt:'os óculos de [sol]',de:'die [Sonnenbrille]'},
+{en:'distribution centre',pt:'o centro de [distribuição]',de:'das [Verteilzentrum]'}
+]}
+],
+reading:{title:'A dinner of false friends',intro:'A playful text built on the traps in this unit. Count how many you catch.',
+en:'The first time Zeca met his girlfriend’s parents, he had prepared for everything except vocabulary. He told her father he had brought a small gift, and her father, who spoke no English, heard “Gift” and looked at the bottle with suspicion. He then said her mother’s cooking was exquisite, which his girlfriend translated faithfully as “esquisito”, so that for a moment everyone believed he found it weird. When the father asked what he actually did, he answered that he was a sales engineer and currently worked on a big project; “aktuell” and “eigentlich” changed places in his head and he said the opposite.\nHer brother asked if he was brave, meaning well-behaved, and Zeca, flattered, said yes, very. By dessert he had claimed to have a sensitive plan for the future, a sympathetic boss and an eventual promotion, each word landing one country away from where he had aimed it.\nHer grandmother, who had watched all this in silence, patted his hand and said he was simpático, which everyone at the table understood correctly, at last.',
+pt:'A primeira vez que o Zeca conheceu os pais da namorada, tinha-se preparado para tudo menos para o vocabulário. Disse ao pai dela que trazia uma pequena prenda, e o pai, que não falava inglês, ouviu «Gift» e olhou para a garrafa com desconfiança. Depois disse que a comida da mãe era «exquisite», que a namorada traduziu fielmente por «esquisita», de modo que por um momento todos acreditaram que ele a achava estranha. Quando o pai perguntou o que ele fazia realmente, respondeu que era engenheiro de vendas e que atualmente trabalhava num grande projeto; «aktuell» e «eigentlich» trocaram de lugar na cabeça dele e disse o contrário.\nO irmão perguntou-lhe se era «brav», querendo dizer bem-comportado, e o Zeca, lisonjeado, disse que sim, muito. À sobremesa já tinha afirmado ter um plano «sensível» para o futuro, um chefe «simpático» e uma promoção «eventual», cada palavra a aterrar a um país de distância do sítio onde ele a tinha apontado.\nA avó, que assistira a tudo em silêncio, deu-lhe uma palmadinha na mão e disse que ele era simpático, o que toda a mesa percebeu corretamente, por fim.',
+de:'Als Zeca die Eltern seiner Freundin zum ersten Mal traf, hatte er sich auf alles vorbereitet außer auf den Wortschatz. Er sagte ihrem Vater, er habe ein kleines Gift mitgebracht, und der Vater, der kein Englisch sprach, hörte „Gift“ und betrachtete die Flasche mit Argwohn. Dann sagte er, das Essen ihrer Mutter sei „exquisite“, was seine Freundin getreu mit „esquisito“ übersetzte, sodass alle einen Moment lang glaubten, er fände es seltsam. Als der Vater fragte, was er eigentlich mache, antwortete er, er sei Vertriebsingenieur und arbeite aktuell an einem großen Projekt; „aktuell“ und „eigentlich“ tauschten in seinem Kopf die Plätze, und er sagte das Gegenteil.\nIhr Bruder fragte, ob er brav sei, und meinte wohlerzogen, und Zeca, geschmeichelt, sagte ja, sehr. Beim Nachtisch hatte er bereits behauptet, einen „sensiblen“ Plan für die Zukunft, einen „sympathischen“ Chef und eine „eventuelle“ Beförderung zu haben, wobei jedes Wort ein Land neben dem landete, auf das er gezielt hatte.\nIhre Großmutter, die das alles schweigend beobachtet hatte, tätschelte seine Hand und sagte, er sei sympathisch, was endlich alle am Tisch richtig verstanden.',
+questions:['List every false friend used in the text.','Which word is a false friend between all three languages?','In the German version, find the Konjunktiv I forms used for reported speech.']}},
+
+/* ================= C2-04 ================= */
+{id:'c2-04',title:'Specialist registers: business, logistics & finance',icon:'📦',
+intro:'The working vocabulary of supply chain, sales and money, in all three languages. Useful for reading contracts, tenders and annual reports in the target language.',
+vocab:[
+{en:'supply chain',pt:'a cadeia de abastecimento',de:'die Lieferkette',icon:'🔗',pos:'noun'},
+{en:'warehouse',pt:'o armazém',de:'das Lager',icon:'🏭',pos:'noun'},
+{en:'inventory / stock',pt:'o inventário / o stock',de:'der Bestand / das Inventar',icon:'📦',pos:'noun'},
+{en:'order picking',pt:'a preparação de encomendas / o picking',de:'die Kommissionierung',icon:'🛒',pos:'noun'},
+{en:'conveyor',pt:'o tapete transportador',de:'das Förderband',icon:'➡️',pos:'noun'},
+{en:'forklift',pt:'o empilhador',de:'der Gabelstapler',icon:'🚜',pos:'noun'},
+{en:'pallet',pt:'a palete',de:'die Palette',icon:'🪵',pos:'noun'},
+{en:'lead time',pt:'o prazo de entrega / o lead time',de:'die Lieferzeit / die Durchlaufzeit',icon:'⏱️',pos:'noun'},
+{en:'throughput',pt:'o débito / a capacidade de processamento',de:'der Durchsatz',icon:'📈',pos:'noun'},
+{en:'tender / call for bids',pt:'o concurso',de:'die Ausschreibung',icon:'📣',pos:'noun'},
+{en:'quotation / quote',pt:'o orçamento / a proposta',de:'das Angebot',icon:'🧾',pos:'noun'},
+{en:'purchase order',pt:'a nota de encomenda',de:'die Bestellung / der Auftrag',icon:'📝',pos:'noun'},
+{en:'terms and conditions',pt:'os termos e condições',de:'die Allgemeinen Geschäftsbedingungen (AGB)',icon:'📜',pos:'noun'},
+{en:'payment terms',pt:'as condições de pagamento',de:'die Zahlungsbedingungen',icon:'💳',pos:'noun'},
+{en:'discount',pt:'o desconto',de:'der Rabatt / der Nachlass',icon:'🏷️',pos:'noun'},
+{en:'margin',pt:'a margem',de:'die Marge',icon:'📊',pos:'noun'},
+{en:'turnover / revenue',pt:'o volume de negócios / a faturação',de:'der Umsatz',icon:'💶',pos:'noun'},
+{en:'profit / loss',pt:'o lucro / o prejuízo',de:'der Gewinn / der Verlust',icon:'⚖️',pos:'noun'},
+{en:'cash flow',pt:'o fluxo de caixa / a tesouraria',de:'der Cashflow / die Liquidität',icon:'💧',pos:'noun'},
+{en:'balance sheet',pt:'o balanço',de:'die Bilanz',icon:'📑',pos:'noun'},
+{en:'share / stock (equity)',pt:'a ação',de:'die Aktie',icon:'📈',pos:'noun'},
+{en:'interest rate',pt:'a taxa de juro',de:'der Zinssatz',icon:'🏦',pos:'noun'},
+{en:'stakeholder',pt:'a parte interessada / o stakeholder',de:'der Stakeholder / der Interessenvertreter',icon:'🧑‍💼',pos:'noun'},
+{en:'to procure',pt:'adquirir / fazer o procurement',de:'beschaffen',icon:'🛍️'},
+{en:'to ship / dispatch',pt:'expedir / enviar',de:'versenden / verschicken',icon:'🚚'},
+{en:'to invoice',pt:'faturar',de:'in Rechnung stellen / fakturieren',icon:'🧾'},
+{en:'to forecast',pt:'prever',de:'prognostizieren / vorhersagen',icon:'🔮'},
+{en:'to outsource',pt:'subcontratar / externalizar',de:'auslagern / outsourcen',icon:'🔀'},
+{en:'to scale up',pt:'escalar / aumentar a escala',de:'hochskalieren / ausbauen',icon:'📐'},
+{en:'to commission (a system)',pt:'colocar em funcionamento / fazer o comissionamento',de:'in Betrieb nehmen',icon:'🟢'}
+],
+phrases:[
+{en:'We submitted a quotation in response to the tender.',pt:'Apresentámos uma proposta em resposta ao concurso.',de:'Wir haben auf die Ausschreibung hin ein Angebot abgegeben.'},
+{en:'Payment terms are thirty days net.',pt:'As condições de pagamento são a trinta dias.',de:'Die Zahlungsbedingungen lauten dreißig Tage netto.'},
+{en:'The system will be commissioned in Q2.',pt:'O sistema será colocado em funcionamento no segundo trimestre.',de:'Das System wird im zweiten Quartal in Betrieb genommen.'},
+{en:'Throughput rose by 18 % after the upgrade.',pt:'O débito aumentou 18 % após a atualização.',de:'Der Durchsatz stieg nach dem Upgrade um 18 %.'},
+{en:'Revenue grew, but margins shrank.',pt:'A faturação cresceu, mas as margens encolheram.',de:'Der Umsatz wuchs, aber die Margen schrumpften.'},
+{en:'We can offer a five percent discount on volume.',pt:'Podemos oferecer um desconto de cinco por cento por volume.',de:'Wir können einen Mengenrabatt von fünf Prozent anbieten.'}
+],
+grammar:[
+{title:'Numbers, percentages and change in business language',en:'Reporting figures precisely. Decimal commas in both languages, thousands separated by a point (PT) or a point/space (DE). “By” an amount: PT em, DE um. “To” a level: PT para, DE auf.',
+pt:'Aumentou 18 % (or em 18 %), subiu para 4,9 minutos, caiu de 7,4 para 4,9, duplicou, triplicou, diminuiu para metade. 1.500 (mil e quinhentos), 2,5 milhões, 0,6 %.',
+de:'stieg um 18 %, stieg auf 4,9 Minuten, sank von 7,4 auf 4,9, hat sich verdoppelt / verdreifacht / halbiert. 1.500 or 1 500 (eintausendfünfhundert), 2,5 Millionen, 0,6 %. Prozent stays singular.',
+examples:[
+{en:'Sales rose by twelve percent.',pt:'As vendas aumentaram [12 %].',de:'Der Umsatz stieg [um] zwölf Prozent.'},
+{en:'Costs fell to two million.',pt:'Os custos caíram [para] dois milhões.',de:'Die Kosten sanken [auf] zwei Millionen.'},
+{en:'The error rate halved.',pt:'A taxa de erro [reduziu-se] para metade.',de:'Die Fehlerquote hat sich [halbiert].'},
+{en:'From 7.4 to 4.9 minutes.',pt:'De 7,4 [para] 4,9 minutos.',de:'Von 7,4 [auf] 4,9 Minuten.'},
+{en:'Two and a half million euros.',pt:'Dois milhões e [meio] de euros.',de:'Zweieinhalb [Millionen] Euro.'}
+]},
+{title:'Anglicisms: which English terms each language keeps',en:'Business Portuguese and business German both borrow from English, but differently. Knowing which words stay English and which get translated saves you from sounding either too foreign or too stiff.',
+pt:'Kept in English: o stock, o picking, o lead time, o stakeholder, o budget (also orçamento), o feedback, o meeting (also reunião), o layout. Translated: a cadeia de abastecimento, o armazém, a faturação, o concurso.',
+de:'Kept in English: der Cashflow, das Meeting, das Feedback, der Stakeholder, das Outsourcing, das Upgrade, der Workflow, das Layout. Translated: die Lieferkette, die Kommissionierung, der Umsatz, die Ausschreibung. German also makes verbs: outsourcen, downloaden, committen (with German endings: geoutsourct).',
+examples:[
+{en:'We need feedback from the stakeholders.',pt:'Precisamos de [feedback] dos stakeholders.',de:'Wir brauchen [Feedback] von den Stakeholdern.'},
+{en:'The warehouse layout is being changed.',pt:'O [layout] do armazém está a ser alterado.',de:'Das [Layout] des Lagers wird geändert.'},
+{en:'They outsourced the picking.',pt:'[Subcontrataram] o picking.',de:'Sie haben die Kommissionierung [outgesourct].'},
+{en:'Stock levels are too high.',pt:'Os níveis de [stock] estão altos demais.',de:'Die [Bestände] sind zu hoch.'}
+]}
+],
+reading:{title:'Minutes of a kick-off meeting',intro:'Business minutes in the three languages.',
+en:'Project: Automation of Zone B, Oeiras DC. Date: 3 November 2026. Present: client project lead, client IT, supplier sales engineer, supplier commissioning lead.\n1. Scope. The supplier confirmed that the offer covers two autonomous picking robots, the conveyor interface and integration with the client’s warehouse management system. Shelf relabelling in Zone B remains the client’s responsibility and must be completed before commissioning.\n2. Schedule. Delivery of hardware is planned for week 6; commissioning for weeks 8 to 10; go-live on 15 March. The client asked whether the schedule could be brought forward by two weeks. The supplier will check with production and respond by Friday.\n3. Commercial. Payment terms were agreed at 30 % on order, 60 % on delivery and 10 % on acceptance. The volume discount of 5 % applies if the option for Zone C is exercised before go-live.\n4. Risks. The IT team flagged that the current WMS version does not support the required interface. An upgrade is scheduled for January; the supplier requested written confirmation of the date.\nNext meeting: 17 November, 10:00, online.',
+pt:'Projeto: Automatização da Zona B, CD de Oeiras. Data: 3 de novembro de 2026. Presentes: gestor de projeto do cliente, TI do cliente, engenheiro de vendas do fornecedor, responsável de comissionamento do fornecedor.\n1. Âmbito. O fornecedor confirmou que a proposta abrange dois robôs autónomos de picking, a interface com o tapete transportador e a integração com o sistema de gestão de armazém do cliente. A reetiquetagem das prateleiras da Zona B continua a ser responsabilidade do cliente e deve estar concluída antes do comissionamento.\n2. Calendário. A entrega do equipamento está prevista para a semana 6; o comissionamento para as semanas 8 a 10; o arranque para 15 de março. O cliente perguntou se seria possível antecipar o calendário em duas semanas. O fornecedor irá verificar com a produção e responder até sexta-feira.\n3. Condições comerciais. Foram acordadas as condições de pagamento de 30 % na encomenda, 60 % na entrega e 10 % na aceitação. O desconto de volume de 5 % aplica-se caso a opção para a Zona C seja exercida antes do arranque.\n4. Riscos. A equipa de TI alertou que a versão atual do WMS não suporta a interface necessária. Está prevista uma atualização para janeiro; o fornecedor solicitou confirmação por escrito da data.\nPróxima reunião: 17 de novembro, 10h00, online.',
+de:'Projekt: Automatisierung Zone B, Verteilzentrum Oeiras. Datum: 3. November 2026. Anwesend: Projektleitung Kunde, IT Kunde, Vertriebsingenieur Lieferant, Inbetriebnahmeleitung Lieferant.\n1. Leistungsumfang. Der Lieferant bestätigte, dass das Angebot zwei autonome Kommissionierroboter, die Förderbandschnittstelle und die Integration in das Lagerverwaltungssystem des Kunden umfasst. Die Neubeschriftung der Regale in Zone B bleibt in der Verantwortung des Kunden und muss vor der Inbetriebnahme abgeschlossen sein.\n2. Terminplan. Die Lieferung der Hardware ist für Kalenderwoche 6 geplant, die Inbetriebnahme für die Wochen 8 bis 10, der Go-live für den 15. März. Der Kunde fragte, ob der Terminplan um zwei Wochen vorgezogen werden könne. Der Lieferant klärt dies mit der Produktion und antwortet bis Freitag.\n3. Kaufmännisches. Als Zahlungsbedingungen wurden 30 % bei Bestellung, 60 % bei Lieferung und 10 % bei Abnahme vereinbart. Der Mengenrabatt von 5 % gilt, sofern die Option für Zone C vor dem Go-live gezogen wird.\n4. Risiken. Das IT-Team wies darauf hin, dass die aktuelle WMS-Version die erforderliche Schnittstelle nicht unterstützt. Ein Upgrade ist für Januar vorgesehen; der Lieferant bat um schriftliche Bestätigung des Termins.\nNächste Besprechung: 17. November, 10:00 Uhr, online.',
+questions:['What remains the client’s responsibility?','Under what condition does the 5 % discount apply, and which verb mood expresses the condition in your target language?','How are “week 6” and “go-live” rendered in each language?']}},
+
+/* ================= C2-05 ================= */
+{id:'c2-05',title:'The last traps: grammar natives get wrong too',icon:'🪤',
+intro:'Fine points that mark a near-native speaker, including a few that native speakers themselves argue about. Use this unit as a checklist, not a lesson.',
+vocab:[
+{en:'haver vs ter (there is / to have)',pt:'há / tem',de:'es gibt / hat',icon:'⚖️',note:'PT: standard “há três pessoas”; colloquial Brazil says “tem três pessoas”; Portugal keeps há.'},
+{en:'a gente (= we, colloquial)',pt:'a gente vai',de:'wir gehen / man geht',icon:'👥',note:'PT: a gente takes the 3rd person singular verb. Colloquial but universal.'},
+{en:'mesóclise (pronoun inside the verb)',pt:'dar-lhe-ei',de:'(no equivalent)',icon:'🔧'},
+{en:'próclise after negation and certain adverbs',pt:'não o vi / já o vi / também te disse',de:'(no equivalent)',icon:'↩️',note:'PT: pronouns move before the verb after não, nunca, já, também, ainda, só, que, quem, onde, and question words.'},
+{en:'ser vs estar with location of events',pt:'a festa é em casa / a casa está limpa',de:'(sein for both)',icon:'📍',note:'PT: events use ser for location (a reunião é na sala 3); objects use estar.'},
+{en:'the dative of advantage / possession (DE)',pt:'(—)',de:'Ich wasche mir die Hände / Mir ist kalt',icon:'🫳'},
+{en:'lassen: to let, to have done, to leave',pt:'deixar / mandar fazer / deixar',de:'lassen',icon:'🔀',note:'DE: Ich lasse das Auto reparieren = I have the car repaired.'},
+{en:'scheinbar vs anscheinend',pt:'aparentemente (falso) / aparentemente (provável)',de:'scheinbar / anscheinend',icon:'🪞',note:'DE: scheinbar = only seemingly (not really); anscheinend = apparently (probably true). Even natives mix them.'},
+{en:'das Gleiche vs dasselbe',pt:'igual / o mesmo',de:'das Gleiche / dasselbe',icon:'🟰',note:'DE: dasselbe = the identical one; das Gleiche = one of the same kind.'},
+{en:'wegen + genitive / dative',pt:'por causa de',de:'wegen des Regens (standard) / wegen dem Regen (colloquial)',icon:'🌧️'},
+{en:'als vs wie in comparisons',pt:'do que / como',de:'größer als / so groß wie',icon:'📏',note:'DE: “größer wie” is a common native error; standard is als.'},
+{en:'seit vs vor',pt:'há (duration) / há (ago)',de:'seit zwei Jahren / vor zwei Jahren',icon:'⏳',note:'PT uses há for both; DE splits seit (since/for) and vor (ago).'},
+{en:'brauchen + zu (negative)',pt:'não é preciso',de:'Du brauchst nicht zu kommen',icon:'🚫',note:'DE: “brauchen” takes zu in the negative; colloquially often dropped.'},
+{en:'conjuntivo after “talvez”',pt:'talvez venha',de:'vielleicht kommt er',icon:'🎲',note:'PT: talvez before the verb requires the subjunctive.'},
+{en:'infinitivo pessoal vs conjuntivo',pt:'para fazermos / para que façamos',de:'(um … zu / damit)',icon:'🔁',note:'PT: both are correct; the personal infinitive is lighter and more common in Portugal.'},
+{en:'o senhor / a senhora + 3rd person',pt:'o senhor quer…?',de:'Möchten Sie…?',icon:'🎩'},
+{en:'gender traps',pt:'o problema, o mapa, a mão, a tribo',de:'das Mädchen, der Käse, die Butter, das Messer',icon:'⚧️',note:'PT: -ma words of Greek origin are masculine (o problema, o sistema, o clima). DE: gender must be memorised; -chen is always neuter.'},
+{en:'plural traps',pt:'o pão → os pães; o cão → os cães; a mão → as mãos',de:'das Wort → die Wörter / die Worte',icon:'➕',note:'DE: Wörter = individual words; Worte = words as speech.'},
+{en:'crase-free: “à” vs “a”',pt:'vou à praia (a + a) / vou a Lisboa',de:'(—)',icon:'✍️',note:'PT: à = a + a (feminine article). No article with most city names, so “a Lisboa”.'},
+{en:'Konjunktiv II in polite questions',pt:'podia / poderia',de:'Könnten Sie… / Hätten Sie…',icon:'🙏'}
+],
+phrases:[
+{en:'I haven’t seen him yet, but I’ve already told you that.',pt:'Ainda não o vi, mas já te disse isso.',de:'Ich habe ihn noch nicht gesehen, aber das habe ich dir schon gesagt.'},
+{en:'The meeting is in room 3; the room is clean.',pt:'A reunião é na sala 3; a sala está limpa.',de:'Die Besprechung ist in Raum 3; der Raum ist sauber.'},
+{en:'I had the car repaired yesterday.',pt:'Mandei arranjar o carro ontem.',de:'Ich habe gestern das Auto reparieren lassen.'},
+{en:'He is apparently ill. (probably true)',pt:'Pelos vistos está doente.',de:'Er ist anscheinend krank.'},
+{en:'We don’t need to leave yet.',pt:'Ainda não é preciso sairmos.',de:'Wir brauchen noch nicht zu gehen.'},
+{en:'Maybe she’ll come tomorrow.',pt:'Talvez ela venha amanhã.',de:'Vielleicht kommt sie morgen.'}
+],
+grammar:[
+{title:'Portuguese pronoun placement: the complete rule',en:'European Portuguese puts object pronouns after the verb by default (ênclise) but before it (próclise) after negation, most adverbs, subordinating words and question words; inside the verb (mesóclise) in the future and conditional of formal writing. This single rule explains most of what sounds “Portuguese” rather than Brazilian.',
+pt:'Default: Vi-o. Dou-te. Proclitic triggers: não o vi; nunca te disse; já me falou; também se queixou; ainda não a conheço; só o vi ontem; que me diga; quem te disse; onde a puseste; quando nos encontrarmos; porque é que te zangaste? Mesoclitic: dir-te-ei, far-se-á (formal). Infinitive after preposition: para te ver / para ver-te (both heard).',
+de:'German pronoun order is governed by the middle field: pronouns come early, after the conjugated verb, accusative before dative when both are pronouns (ich gebe es dir), dative before accusative when the accusative is a noun (ich gebe dir das Buch).',
+examples:[
+{en:'I saw him.',pt:'[Vi-o].',de:'Ich habe [ihn] gesehen.'},
+{en:'I didn’t see him.',pt:'Não [o] vi.',de:'Ich habe [ihn] nicht gesehen.'},
+{en:'I already told you.',pt:'Já [te] disse.',de:'Ich habe [es] dir schon gesagt.'},
+{en:'Who told you?',pt:'Quem [te] disse?',de:'Wer hat [es] dir gesagt?'},
+{en:'I will tell you tomorrow. (formal)',pt:'[Dir-te-ei] amanhã.',de:'Ich werde [es] dir morgen sagen.'},
+{en:'I give it to you.',pt:'[Dou-to].',de:'Ich gebe [es] dir.'}
+]},
+{title:'German middle-field order and the end-field verb cluster',en:'In a German sentence, after the verb comes the “middle field”, ordered roughly: pronouns, subject (if not first), time, cause, manner, place (te-ka-mo-lo), then the rest, and finally the verb cluster: participle or infinitive, with modals last in subordinate clauses. Portuguese word order is far freer and relies on intonation.',
+pt:'Portuguese order is flexible: Ontem dei-lhe o livro em casa / Dei-lhe ontem o livro em casa / Em casa, ontem, dei-lhe o livro. Emphasis by position, not by rule.',
+de:'Ich habe ihm gestern wegen des Regens schnell zu Hause das Buch gegeben. Subordinate verb cluster: …, dass ich das Buch gestern habe lesen wollen / …, weil er es nicht hat machen können (colloquial: machen konnte). Two infinitives: the finite verb jumps in front of them (Ersatzinfinitiv).',
+examples:[
+{en:'I gave him the book at home yesterday.',pt:'Ontem [dei-lhe] o livro em casa.',de:'Ich habe ihm [gestern] zu Hause das Buch gegeben.'},
+{en:'…because he couldn’t do it.',pt:'…porque ele não [conseguiu] fazê-lo.',de:'…weil er es nicht machen [konnte].'},
+{en:'…that I wanted to read the book.',pt:'…que eu [queria] ler o livro.',de:'…dass ich das Buch lesen [wollte].'},
+{en:'…that I had wanted to read the book.',pt:'…que eu [tinha] querido ler o livro.',de:'…dass ich das Buch [habe] lesen wollen.'},
+{en:'She quickly gave it to me.',pt:'Ela [deu-mo] depressa.',de:'Sie hat [es] mir schnell gegeben.'}
+]}
+],
+reading:{title:'A letter to my future self, in two languages',intro:'The closing text of the course. Each of you reads the version in your target language; the English is for the shape of it.',
+en:'By the time you read this, you will have been studying for a year. You will still make mistakes: you will put a pronoun in the wrong place, you will say “wie” where “als” belongs, you will reach for the subjunctive and find the indicative in your mouth. None of that matters as much as the fact that you will understand the grandmother, the news, the contract and the joke.\nRemember how it started: one word in three columns, thank you, obrigado, danke. Remember that the two of you did the same page on the same evening and compared answers, and that the comparing was the point. The languages were never the goal. The goal was the sentence one of you would say, one day, without thinking, in the other’s language, and the other would answer without noticing which language it was.\nIf you have reached this unit, that sentence has probably already happened. Go back to the first unit and read it again; it will feel like a photograph. Then close this course, and go and talk.',
+pt:'Quando leres isto, já estudas há um ano. Ainda vais errar: vais pôr um pronome no sítio errado, vais dizer «wie» onde devia estar «als», vais procurar o conjuntivo e encontrar o indicativo na boca. Nada disso importa tanto como o facto de ires perceber a avó, as notícias, o contrato e a piada.\nLembra-te de como começou: uma palavra em três colunas, thank you, obrigado, danke. Lembra-te de que os dois fizeram a mesma página na mesma noite e compararam respostas, e de que comparar era o objetivo. As línguas nunca foram a meta. A meta era a frase que um de vocês diria, um dia, sem pensar, na língua do outro, e que o outro responderia sem reparar em que língua era.\nSe chegaste a esta unidade, essa frase provavelmente já aconteceu. Volta à primeira unidade e lê-a outra vez; vai parecer uma fotografia. Depois fecha este curso, e vai falar.',
+de:'Wenn du das hier liest, lernst du seit einem Jahr. Du wirst noch Fehler machen: Du wirst ein Pronomen an die falsche Stelle setzen, du wirst „wie“ sagen, wo „als“ hingehört, du wirst nach dem Konjunktiv greifen und den Indikativ im Mund finden. Nichts davon zählt so viel wie die Tatsache, dass du die Großmutter, die Nachrichten, den Vertrag und den Witz verstehen wirst.\nErinnere dich, wie es anfing: ein Wort in drei Spalten, thank you, obrigado, danke. Erinnere dich, dass ihr beide am selben Abend dieselbe Seite gemacht und die Antworten verglichen habt, und dass das Vergleichen der Sinn der Sache war. Die Sprachen waren nie das Ziel. Das Ziel war der Satz, den einer von euch eines Tages sagen würde, ohne nachzudenken, in der Sprache des anderen, und auf den der andere antworten würde, ohne zu merken, in welcher Sprache.\nWenn du bei dieser Einheit angekommen bist, ist dieser Satz wahrscheinlich schon gefallen. Geh zurück zur ersten Einheit und lies sie noch einmal; sie wird sich wie ein Foto anfühlen. Dann schließ diesen Kurs, und geh reden.',
+questions:['Find the future perfect / compound future in the first sentence of each version.','Which mistakes does the text predict you will still make, and have you made them?']}}
+]});

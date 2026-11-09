@@ -1,0 +1,320 @@
+window.COURSE_DATA.push({
+id:'C1',name:'Advanced',
+canDo:'Understand demanding, longer texts and implicit meaning. Express yourself fluently without obvious searching for words, use language flexibly for social, academic and professional purposes, and produce well-structured text on complex subjects.',
+scaffold:'C1 units are scaffolds: vocabulary, two grammar points and a parallel reading each. At this level most progress comes from reading and listening to real material; use these units as a map of what to notice.',
+units:[
+/* ================= C1-01 ================= */
+{id:'c1-01',title:'Narrative style: literary tenses & pacing',icon:'📚',
+intro:'How novels and long-form journalism handle time. Portuguese has a one-word pluperfect (fizera) that lives only in writing; German narrative runs on Präteritum and Plusquamperfekt and shifts into characters’ heads with free indirect speech.',
+vocab:[
+{en:'narrator',pt:'o narrador / a narradora',de:'der Erzähler / die Erzählerin',icon:'🗣️',pos:'noun'},
+{en:'plot',pt:'o enredo',de:'die Handlung',icon:'🧵',pos:'noun'},
+{en:'character (in a story)',pt:'a personagem',de:'die Figur',icon:'🎭',pos:'noun',note:'PT: a personagem is feminine even for a male character (o personagem is heard but traditionally feminine).'},
+{en:'chapter',pt:'o capítulo',de:'das Kapitel',icon:'📑',pos:'noun'},
+{en:'setting',pt:'o cenário / o ambiente',de:'der Schauplatz',icon:'🏞️',pos:'noun'},
+{en:'flashback',pt:'a analepse / o flashback',de:'die Rückblende',icon:'⏪',pos:'noun'},
+{en:'suspense',pt:'o suspense',de:'die Spannung',icon:'😬',pos:'noun'},
+{en:'twist',pt:'a reviravolta',de:'die Wendung',icon:'🌀',pos:'noun'},
+{en:'to unfold',pt:'desenrolar-se',de:'sich entfalten / sich abspielen',icon:'🎞️'},
+{en:'to foreshadow',pt:'prenunciar / antecipar',de:'andeuten / vorwegnehmen',icon:'🔮'},
+{en:'to dwell on',pt:'demorar-se em',de:'verweilen bei',icon:'🐌'},
+{en:'to glance',pt:'relancear / lançar um olhar',de:'einen Blick werfen',icon:'👁️'},
+{en:'to stare',pt:'fitar',de:'starren / anstarren',icon:'👀'},
+{en:'to mutter',pt:'murmurar / resmungar',de:'murmeln',icon:'🤫'},
+{en:'to sigh',pt:'suspirar',de:'seufzen',icon:'😮‍💨'},
+{en:'to shiver',pt:'tremer / arrepiar-se',de:'zittern / frösteln',icon:'🥶'},
+{en:'dusk',pt:'o crepúsculo / o anoitecer',de:'die Dämmerung',icon:'🌆',pos:'noun'},
+{en:'dawn',pt:'a madrugada / a alvorada',de:'das Morgengrauen',icon:'🌄',pos:'noun'},
+{en:'silence',pt:'o silêncio',de:'die Stille',icon:'🤐',pos:'noun'},
+{en:'gloomy',pt:'sombrio',de:'düster',icon:'🌑'},
+{en:'vivid',pt:'vívido',de:'lebendig / anschaulich',icon:'🎨'},
+{en:'ambiguous',pt:'ambíguo',de:'mehrdeutig / zweideutig',icon:'❓'},
+{en:'scarcely / hardly',pt:'mal',de:'kaum',icon:'🤏',note:'PT: mal entrara, … = he had scarcely entered when…'}
+],
+phrases:[
+{en:'He had barely sat down when the phone rang.',pt:'Mal se sentara, o telefone tocou.',de:'Kaum hatte er sich gesetzt, da klingelte das Telefon.'},
+{en:'She had never seen the house so quiet.',pt:'Nunca vira a casa tão silenciosa.',de:'Nie hatte sie das Haus so still gesehen.'},
+{en:'It was late; she would have to decide now.',pt:'Era tarde; teria de decidir agora.',de:'Es war spät; sie musste sich jetzt entscheiden.'},
+{en:'The story unfolds over a single night.',pt:'A história desenrola-se ao longo de uma única noite.',de:'Die Handlung spielt sich in einer einzigen Nacht ab.'},
+{en:'The ending is deliberately ambiguous.',pt:'O final é deliberadamente ambíguo.',de:'Das Ende ist bewusst mehrdeutig.'}
+],
+grammar:[
+{title:'The written pluperfect: fizera / hatte gemacht',en:'“Had done”. Spoken Portuguese uses tinha feito; literary Portuguese uses the simple pluperfect (fizera, chegara, vira), formed from the eles perfeito minus -am plus -a. German uses the Plusquamperfekt in all registers.',
+pt:'falaram → falara, falaras, falara, faláramos, falaram. fizeram → fizera; viram → vira; foram → fora; tiveram → tivera. Mal chegara, ouviu um grito. Note that fora, vira and tivera coincide with other forms; context disambiguates.',
+de:'hatte/war + Partizip II: Er hatte das Haus verlassen, bevor sie aufwachte. Kaum war sie angekommen, als es zu regnen begann. Nachdem + Plusquamperfekt, main clause Präteritum: Nachdem er gegessen hatte, ging er.',
+examples:[
+{en:'He had already left when she arrived.',pt:'Ele já [saíra] quando ela chegou.',de:'Er [war] schon gegangen, als sie ankam.'},
+{en:'She had never seen the sea.',pt:'Nunca [vira] o mar.',de:'Sie [hatte] das Meer nie gesehen.'},
+{en:'After he had eaten, he slept.',pt:'Depois de ter comido, [adormeceu].',de:'Nachdem er gegessen [hatte], schlief er.'},
+{en:'They had been happy there.',pt:'[Tinham] sido felizes ali.',de:'Sie [waren] dort glücklich gewesen.'}
+]},
+{title:'Free indirect speech and tense in narration',en:'Novels slip into a character’s thoughts without “she thought”: tense and pronouns stay in the narration, but the words are the character’s. German does this with the Präteritum and often Konjunktiv II; Portuguese with the imperfeito and conditional.',
+pt:'Era tarde. Teria de decidir agora, ou nunca. Que diria a mãe? The imperfeito carries the character’s present; the conditional carries her future.',
+de:'Es war spät. Sie musste sich jetzt entscheiden, oder nie. Was würde die Mutter sagen? The Präteritum carries the present, würde the future. Questions and exclamations keep their marks without quotation.',
+examples:[
+{en:'What would her mother say?',pt:'Que [diria] a mãe?',de:'Was [würde] die Mutter sagen?'},
+{en:'He couldn’t stay here. Not tonight.',pt:'Não [podia] ficar ali. Hoje não.',de:'Er [konnte] nicht hierbleiben. Nicht heute Nacht.'},
+{en:'Tomorrow everything would be different.',pt:'Amanhã tudo [seria] diferente.',de:'Morgen [würde] alles anders sein.'},
+{en:'Why had nobody told her?',pt:'Porque é que ninguém lhe [dissera]?',de:'Warum [hatte] ihr niemand etwas gesagt?'}
+]}
+],
+reading:{title:'The last ferry',intro:'A short piece of original narrative using the literary tenses.',
+en:'By the time Inês reached the quay the last ferry had already pulled away, and the lights of Cacilhas trembled on the water like something remembered rather than seen. She had run the length of Rua do Arsenal for nothing. She stood there, breathing, and watched the gap widen.\nIt was not the ferry that mattered. She could take a taxi across the bridge; she had done it before. What mattered was that she had promised to be on this one, at this hour, and that he would be standing on the other side with the coat she had forgotten, counting the people coming down the ramp and not finding her.\nShe took out her phone, then put it back. He would call. He always called first. The river smelled of diesel and salt, and somewhere behind her a tram bell rang twice, as if to say: well, then. What now?',
+pt:'Quando Inês chegou ao cais, o último cacilheiro já se afastara, e as luzes de Cacilhas tremiam na água como algo recordado e não visto. Correra a Rua do Arsenal inteira para nada. Ficou ali, a respirar, a ver a distância alargar-se.\nNão era o barco que importava. Podia apanhar um táxi pela ponte; já o fizera antes. O que importava era que prometera estar naquele, àquela hora, e que ele estaria do outro lado com o casaco que ela se esquecera, a contar as pessoas que desciam a rampa sem a encontrar.\nTirou o telemóvel e voltou a guardá-lo. Ele ligaria. Ligava sempre primeiro. O rio cheirava a gasóleo e a sal, e algures atrás dela a campainha de um elétrico tocou duas vezes, como quem diz: pronto. E agora?',
+de:'Als Inês den Kai erreichte, hatte die letzte Fähre bereits abgelegt, und die Lichter von Cacilhas zitterten auf dem Wasser wie etwas Erinnertes, nicht etwas Gesehenes. Sie war die ganze Rua do Arsenal umsonst entlanggerannt. Sie stand da, atmete, und sah zu, wie der Abstand wuchs.\nEs war nicht die Fähre, die zählte. Sie konnte ein Taxi über die Brücke nehmen; das hatte sie schon einmal getan. Was zählte, war, dass sie versprochen hatte, auf dieser hier zu sein, zu dieser Stunde, und dass er auf der anderen Seite stehen würde, mit dem Mantel, den sie vergessen hatte, und die Leute zählen würde, die die Rampe herunterkamen, ohne sie zu finden.\nSie nahm ihr Handy heraus und steckte es wieder ein. Er würde anrufen. Er rief immer zuerst an. Der Fluss roch nach Diesel und Salz, und irgendwo hinter ihr läutete zweimal die Glocke einer Straßenbahn, als wollte sie sagen: Nun denn. Und jetzt?',
+questions:['Find three pluperfect forms in your target language.','Which sentences are free indirect speech (Inês’s thoughts in the narrator’s tense)?','How is “as if to say” rendered in each language?']}},
+
+/* ================= C1-02 ================= */
+{id:'c1-02',title:'Academic & professional writing',icon:'🎓',
+intro:'Reports, theses, proposals. German builds dense noun phrases and uses fixed verb-noun combinations (Funktionsverbgefüge); Portuguese stacks nominalisations and uses the compound personal infinitive.',
+vocab:[
+{en:'abstract / summary',pt:'o resumo',de:'die Zusammenfassung / das Abstract',icon:'📄',pos:'noun'},
+{en:'introduction',pt:'a introdução',de:'die Einleitung',icon:'🚪',pos:'noun'},
+{en:'methodology',pt:'a metodologia',de:'die Methodik',icon:'🧪',pos:'noun'},
+{en:'findings',pt:'os resultados / as conclusões',de:'die Ergebnisse / die Erkenntnisse',icon:'🔍',pos:'noun'},
+{en:'hypothesis',pt:'a hipótese',de:'die Hypothese',icon:'💡',pos:'noun'},
+{en:'approach',pt:'a abordagem',de:'der Ansatz',icon:'🧭',pos:'noun'},
+{en:'framework',pt:'o enquadramento / o quadro',de:'der Rahmen',icon:'🖼️',pos:'noun'},
+{en:'scope',pt:'o âmbito',de:'der Umfang / der Geltungsbereich',icon:'📐',pos:'noun'},
+{en:'within the scope of',pt:'no âmbito de',de:'im Rahmen (von)',icon:'📦'},
+{en:'to carry out',pt:'realizar / levar a cabo',de:'durchführen',icon:'🛠️'},
+{en:'to assess / evaluate',pt:'avaliar',de:'bewerten / beurteilen',icon:'📊'},
+{en:'to implement',pt:'implementar',de:'umsetzen',icon:'⚙️'},
+{en:'to address (an issue)',pt:'abordar',de:'behandeln / angehen',icon:'🎯'},
+{en:'to highlight',pt:'salientar / realçar',de:'hervorheben',icon:'🖍️'},
+{en:'to point out',pt:'apontar / referir',de:'darauf hinweisen',icon:'👉'},
+{en:'to take a decision',pt:'tomar uma decisão',de:'eine Entscheidung treffen',icon:'⚖️'},
+{en:'to reach an agreement',pt:'chegar a acordo',de:'eine Einigung erzielen',icon:'🤝'},
+{en:'to raise a question',pt:'levantar uma questão',de:'eine Frage aufwerfen',icon:'❓'},
+{en:'to draw a conclusion',pt:'tirar uma conclusão',de:'eine Schlussfolgerung ziehen',icon:'🧩'},
+{en:'respectively',pt:'respetivamente',de:'beziehungsweise (bzw.)',icon:'↔️'},
+{en:'furthermore',pt:'além disso / ademais',de:'darüber hinaus / ferner',icon:'➕'},
+{en:'with regard to',pt:'no que diz respeito a',de:'hinsichtlich / im Hinblick auf',icon:'🔎'},
+{en:'insofar as',pt:'na medida em que',de:'insofern als / sofern',icon:'📏'},
+{en:'to a large extent',pt:'em grande medida',de:'in hohem Maße / weitgehend',icon:'📈'}
+],
+phrases:[
+{en:'This report assesses the impact of the new process on delivery times.',pt:'O presente relatório avalia o impacto do novo processo nos prazos de entrega.',de:'Der vorliegende Bericht bewertet die Auswirkungen des neuen Prozesses auf die Lieferzeiten.'},
+{en:'The data were collected over six months.',pt:'Os dados foram recolhidos ao longo de seis meses.',de:'Die Daten wurden über einen Zeitraum von sechs Monaten erhoben.'},
+{en:'It should be noted that the sample is small.',pt:'Importa salientar que a amostra é reduzida.',de:'Es ist darauf hinzuweisen, dass die Stichprobe klein ist.'},
+{en:'A decision was taken to extend the pilot.',pt:'Foi tomada a decisão de prolongar o projeto-piloto.',de:'Es wurde die Entscheidung getroffen, das Pilotprojekt zu verlängern.'},
+{en:'The results can be summarised as follows.',pt:'Os resultados podem resumir-se da seguinte forma.',de:'Die Ergebnisse lassen sich wie folgt zusammenfassen.'}
+],
+grammar:[
+{title:'Funktionsverbgefüge and their Portuguese cousins',en:'Formal German replaces simple verbs with verb + noun combinations: eine Entscheidung treffen (entscheiden), zur Anwendung kommen (angewendet werden), in Betracht ziehen (erwägen). Portuguese formal style does the same: tomar uma decisão, proceder à análise, dar início a.',
+pt:'tomar uma decisão, proceder a (uma análise), dar início a, pôr em prática, levar a cabo, ter em consideração, fazer referência a, estar em vigor, entrar em vigor.',
+de:'eine Entscheidung treffen, zur Anwendung kommen, in Betracht ziehen, in Kraft treten, zur Verfügung stehen, Bezug nehmen auf, in Frage stellen, zum Ausdruck bringen, eine Rolle spielen.',
+examples:[
+{en:'The new rule comes into force in January.',pt:'A nova regra [entra] em vigor em janeiro.',de:'Die neue Regel [tritt] im Januar in Kraft.'},
+{en:'Several options were considered.',pt:'Foram [tidas] em consideração várias opções.',de:'Mehrere Optionen wurden in Betracht [gezogen].'},
+{en:'The budget is available to the team.',pt:'O orçamento está à [disposição] da equipa.',de:'Das Budget steht dem Team zur [Verfügung].'},
+{en:'The author questions this assumption.',pt:'O autor [põe] em causa este pressuposto.',de:'Der Autor [stellt] diese Annahme in Frage.'},
+{en:'Price plays a decisive role.',pt:'O preço [desempenha] um papel decisivo.',de:'Der Preis [spielt] eine entscheidende Rolle.'}
+]},
+{title:'Compressed clauses: Partizipialkonstruktionen (DE) and the compound personal infinitive (PT)',en:'Academic style compresses subordinate clauses. German puts a whole clause before a noun as an extended participle (die im Rahmen des Projekts erhobenen Daten). Portuguese uses the personal infinitive, including the compound form (por terem sido recolhidos, apesar de termos analisado).',
+pt:'Compound personal infinitive: ter + participle with personal endings: por termos analisado (because we analysed), depois de terem sido recolhidos (after they were collected), apesar de ter sido aprovado (although it was approved). Also the gerund in writing: tendo em conta, considerando.',
+de:'Extended attribute: die [im Rahmen des Projekts erhobenen] Daten = die Daten, die im Rahmen des Projekts erhoben wurden. der [von der Kommission vorgeschlagene] Ansatz. die [noch zu klärenden] Fragen (zu + Partizip I = that must be clarified).',
+examples:[
+{en:'the data collected within the project',pt:'os dados [recolhidos] no âmbito do projeto',de:'die im Rahmen des Projekts [erhobenen] Daten'},
+{en:'the approach proposed by the commission',pt:'a abordagem [proposta] pela comissão',de:'der von der Kommission [vorgeschlagene] Ansatz'},
+{en:'the questions still to be clarified',pt:'as questões ainda por [esclarecer]',de:'die noch zu [klärenden] Fragen'},
+{en:'After the data had been analysed, the team met.',pt:'Depois de os dados [terem] sido analisados, a equipa reuniu-se.',de:'Nachdem die Daten analysiert worden [waren], traf sich das Team.'},
+{en:'Although we had tested the system, errors occurred.',pt:'Apesar de [termos] testado o sistema, ocorreram erros.',de:'Obwohl wir das System getestet [hatten], traten Fehler auf.'}
+]}
+],
+reading:{title:'Executive summary: pilot of a picking robot',intro:'A business report in the three languages. Compare how each compresses information.',
+en:'Objective. The pilot assessed whether a single autonomous picking robot could reduce order-processing time in the Oeiras distribution centre without increasing error rates.\nMethod. Over a period of twelve weeks, 4,800 orders were processed by the robot and compared with 4,800 orders of similar size picked manually in the same zone. Processing time, picking errors and operator interventions were recorded for both groups.\nFindings. Average processing time fell from 7.4 to 4.9 minutes per order. Picking errors decreased from 1.8 % to 0.6 %. However, operator interventions were required in 11 % of robot orders, mostly owing to mislabelled shelf locations rather than to the robot itself.\nConclusion. The results support an extension of the pilot to a second zone, provided that shelf labelling is corrected beforehand. A decision on full deployment should be taken only after the extended pilot has been evaluated.',
+pt:'Objetivo. O projeto-piloto avaliou se um único robô autónomo de picking poderia reduzir o tempo de processamento de encomendas no centro de distribuição de Oeiras sem aumentar a taxa de erros.\nMétodo. Ao longo de doze semanas, foram processadas 4.800 encomendas pelo robô e comparadas com 4.800 encomendas de dimensão semelhante recolhidas manualmente na mesma zona. Registaram-se, para ambos os grupos, o tempo de processamento, os erros de picking e as intervenções dos operadores.\nResultados. O tempo médio de processamento desceu de 7,4 para 4,9 minutos por encomenda. Os erros de picking diminuíram de 1,8 % para 0,6 %. Contudo, foram necessárias intervenções dos operadores em 11 % das encomendas do robô, sobretudo devido a localizações de prateleira mal etiquetadas e não ao robô em si.\nConclusão. Os resultados sustentam o alargamento do piloto a uma segunda zona, desde que a etiquetagem das prateleiras seja corrigida previamente. A decisão sobre a implementação total só deverá ser tomada depois de o piloto alargado ter sido avaliado.',
+de:'Zielsetzung. Der Pilotversuch bewertete, ob ein einzelner autonomer Kommissionierroboter die Auftragsbearbeitungszeit im Distributionszentrum Oeiras verkürzen kann, ohne die Fehlerquote zu erhöhen.\nMethode. Über einen Zeitraum von zwölf Wochen wurden 4.800 Aufträge vom Roboter bearbeitet und mit 4.800 Aufträgen ähnlicher Größe verglichen, die in derselben Zone manuell kommissioniert wurden. Für beide Gruppen wurden Bearbeitungszeit, Kommissionierfehler und Eingriffe durch Mitarbeitende erfasst.\nErgebnisse. Die durchschnittliche Bearbeitungszeit sank von 7,4 auf 4,9 Minuten pro Auftrag. Die Kommissionierfehler gingen von 1,8 % auf 0,6 % zurück. Allerdings waren bei 11 % der Roboteraufträge Eingriffe durch Mitarbeitende erforderlich, überwiegend aufgrund falsch beschrifteter Regalplätze und nicht wegen des Roboters selbst.\nSchlussfolgerung. Die Ergebnisse sprechen für eine Ausweitung des Pilotversuchs auf eine zweite Zone, sofern die Regalbeschriftung zuvor korrigiert wird. Eine Entscheidung über den vollständigen Einsatz sollte erst nach Auswertung des erweiterten Pilotversuchs getroffen werden.',
+questions:['What caused most operator interventions?','Find the condition (“provided that / sofern / desde que”) in your target language and note the verb mood.','How does each language say “a decision should be taken”?']}},
+
+/* ================= C1-03 ================= */
+{id:'c1-03',title:'Register shifting: slang, diminutives & tone',icon:'🎚️',
+intro:'Moving between street, home and office. Portuguese expresses tone through diminutives and augmentatives (-inho, -ão); German through youth slang, dialect colour and precise register words.',
+vocab:[
+{en:'slang',pt:'o calão / a gíria',de:'die Umgangssprache / der Slang',icon:'🗯️',pos:'noun'},
+{en:'register (level of language)',pt:'o registo',de:'das Register / die Stilebene',icon:'🎚️',pos:'noun'},
+{en:'formal / informal',pt:'formal / informal',de:'förmlich / umgangssprachlich',icon:'👔'},
+{en:'dude / mate',pt:'pá / meu',de:'Alter / Digga',icon:'🧢',note:'PT: pá is the all-purpose Portuguese filler (ó pá!). DE: Alter and Digga are youth slang.'},
+{en:'guy / bloke',pt:'o gajo / o tipo',de:'der Typ / der Kerl',icon:'🧔',note:'PT: gajo/gaja is informal and fine among friends, rude elsewhere.'},
+{en:'kid',pt:'o miúdo / a miúda',de:'das Kind / der Knirps',icon:'🧒',note:'PT: miúdo/miúda is the Portugal word; also used for young adults among friends.'},
+{en:'awesome',pt:'brutal / bestial / do caraças',de:'krass / mega / hammer',icon:'🤩',note:'PT: brutal and bestial are positive in Portugal.'},
+{en:'rubbish / lame',pt:'uma seca / uma treta',de:'Mist / lahm',icon:'🥱',note:'PT: que seca = what a bore.'},
+{en:'to hang out',pt:'curtir / estar na boa',de:'abhängen / chillen',icon:'🛋️'},
+{en:'to be hungover',pt:'estar de ressaca',de:'einen Kater haben',icon:'🤕'},
+{en:'to screw up',pt:'fazer asneira / estragar tudo',de:'Mist bauen / es vermasseln',icon:'😬'},
+{en:'to show off',pt:'armar-se / gabar-se',de:'angeben',icon:'🦚'},
+{en:'nosy',pt:'coscuvilheiro / coscuvilheira',de:'neugierig',icon:'👃'},
+{en:'gossip',pt:'a coscuvilhice / o mexerico',de:'der Klatsch / der Tratsch',icon:'🗣️',pos:'noun'},
+{en:'cheeky',pt:'atrevido / descarado',de:'frech',icon:'😏'},
+{en:'little (affectionate suffix)',pt:'-inho / -inha',de:'-chen / -lein',icon:'🤏',note:'PT: um cafezinho, a casinha, devagarinho. DE: Häuschen, Kätzchen; much less productive than in Portuguese.'},
+{en:'big (augmentative suffix)',pt:'-ão / -ona',de:'Riesen- / riesig',icon:'🦣',note:'PT: um carrão (a big flashy car), uma casona, um mulherão.'},
+{en:'posh',pt:'betinho / fino',de:'schickimicki / vornehm',icon:'🎩',note:'PT: betinho/betinha is the Lisbon preppy stereotype.'},
+{en:'cheapskate',pt:'forreta / agarrado',de:'Geizhals / geizig',icon:'🪙'},
+{en:'to be lucky (slang)',pt:'ter sorte / ter cu',de:'Schwein haben',icon:'🍀',note:'DE: Schwein haben = to be lucky, literally “to have pig”.'}
+],
+phrases:[
+{en:'Shall we grab a quick coffee?',pt:'Vamos tomar um cafezinho?',de:'Trinken wir schnell einen Kaffee?'},
+{en:'That concert was awesome.',pt:'Aquele concerto foi brutal.',de:'Das Konzert war krass gut.'},
+{en:'What a bore this meeting is.',pt:'Que seca, esta reunião.',de:'Was für eine Schnarchveranstaltung.'},
+{en:'He really screwed up this time.',pt:'Desta vez ele fez mesmo asneira.',de:'Diesmal hat er richtig Mist gebaut.'},
+{en:'Slowly, slowly, we’ll get there.',pt:'Devagarinho, lá chegamos.',de:'Langsam, langsam, wir kommen schon hin.'},
+{en:'Don’t be so nosy.',pt:'Não sejas coscuvilheiro.',de:'Sei nicht so neugierig.'}
+],
+grammar:[
+{title:'Portuguese diminutives and augmentatives: more than size',en:'Portuguese suffixes carry affection, irony, politeness and intensity. -inho/-inha softens requests and shows warmth; -ão/-ona enlarges, sometimes mockingly; -ito, -zinho, -zito are variants. German has -chen and -lein for small/cute but relies on adverbs (mal, kurz, ganz) for the rest.',
+pt:'um cafezinho (a quick/nice coffee), uma esperinha (just a moment), devagarinho (nice and slowly), obrigadinho (thanks, slightly ironic), um beijinho (a kiss, as a sign-off), um carrão (a huge car), um filmaço (a great film), uma palavrão (a swear word).',
+de:'ein Käffchen (colloquial, affectionate), ein Momentchen, ein Bisschen, Häuschen, Mäuschen. For intensity German uses prefixes: Riesen-, Mords-, mega-, super- (ein Riesenauto, ein Mordsfilm).',
+examples:[
+{en:'Just a little moment.',pt:'Só uma [esperinha].',de:'Nur ein [Momentchen].'},
+{en:'A big kiss (text sign-off).',pt:'Um [beijinho] grande.',de:'Dicken [Kuss].'},
+{en:'What a great film!',pt:'Que [filmaço]!',de:'Was für ein [Hammerfilm]!'},
+{en:'He drives a huge car.',pt:'Ele anda num [carrão].',de:'Er fährt ein [Riesenauto].'},
+{en:'Take it nice and slow.',pt:'Vai [devagarinho].',de:'Mach ganz [langsam].'}
+]},
+{title:'Register markers in German: Sie/du, dialect colour, and Jugendsprache',en:'German register is signalled by the pronoun (Sie vs du), by vocabulary (Sie-level: erhalten, beginnen; du-level: kriegen, anfangen) and by regional colour. Portuguese register is signalled by tu/você/o senhor and by the choice between learned and everyday words.',
+pt:'tu (friends, family, same-age colleagues in many companies), você (neutral-formal, avoided as a word in Portugal: people say “o senhor quer…?” or just the verb), o senhor / a senhora (formal), o doutor / a engenheira (professional titles). Learned vs everyday: compreender / perceber, adquirir / comprar, efetuar / fazer.',
+de:'du vs Sie: offer with “Wollen wir uns duzen?”. Register pairs: erhalten / kriegen, beginnen / anfangen, sich befinden / sein, speisen / essen, verstorben / tot. Regional: Grüß Gott (south), Moin (north), Servus (Bavaria/Austria). Youth: krass, Digga, safe (= definitely), cringe, lost.',
+examples:[
+{en:'Did you get my message? (informal)',pt:'[Recebeste] a minha mensagem?',de:'Hast du meine Nachricht [gekriegt]?'},
+{en:'Have you received my message? (formal)',pt:'[Recebeu] a minha mensagem?',de:'Haben Sie meine Nachricht [erhalten]?'},
+{en:'Shall we switch to first names?',pt:'Podemos [tratar-nos] por tu?',de:'Wollen wir uns [duzen]?'},
+{en:'Would the gentleman like a coffee?',pt:'O [senhor] deseja um café?',de:'Möchten [Sie] einen Kaffee?'},
+{en:'That was definitely cringe.',pt:'Isso foi mesmo [vergonhoso].',de:'Das war [safe] cringe.'}
+]}
+],
+reading:{title:'Three ways to say the same thing',intro:'The same short message in three registers. Read all three in your target language and note what changes.',
+en:'[To a friend] Hey, I’m running late, the metro’s a mess. Grab me a beer, I’ll be there in ten, promise. Don’t let Rui start the karaoke without me.\n[To a colleague] Hi Ana, I’m going to be about ten minutes late, there’s a problem on the metro. Could you start the meeting without me? I’ll join as soon as I arrive.\n[To a client] Dear Mr Schneider, I regret to inform you that I shall be approximately ten minutes late for our meeting owing to a disruption on the metro line. I apologise for any inconvenience and will join you as soon as I arrive.',
+pt:'[A um amigo] Ó pá, estou atrasado, o metro está um caos. Pede-me uma imperial, chego daqui a dez minutos, prometo. Não deixes o Rui começar o karaoke sem mim.\n[A uma colega] Olá Ana, vou chegar uns dez minutos atrasado, há um problema no metro. Podes começar a reunião sem mim? Junto-me assim que chegar.\n[A um cliente] Exmo. Sr. Schneider, lamento informar que chegarei com cerca de dez minutos de atraso à nossa reunião, devido a uma perturbação na linha do metro. Peço desculpa pelo incómodo e juntar-me-ei a si assim que chegar.',
+de:'[An einen Freund] Ey, ich komm später, die U-Bahn ist ein Chaos. Bestell mir schon mal ein Bier, bin in zehn Minuten da, versprochen. Lass Rui bloß nicht ohne mich mit dem Karaoke anfangen.\n[An eine Kollegin] Hallo Ana, ich komme etwa zehn Minuten zu spät, es gibt ein Problem bei der U-Bahn. Könntest du die Besprechung ohne mich anfangen? Ich stoße dazu, sobald ich da bin.\n[An einen Kunden] Sehr geehrter Herr Schneider, leider muss ich Ihnen mitteilen, dass ich mich aufgrund einer Störung auf der U-Bahn-Linie um etwa zehn Minuten zu unserem Termin verspäten werde. Ich bitte die Unannehmlichkeiten zu entschuldigen und werde unmittelbar nach meiner Ankunft zu Ihnen stoßen.',
+questions:['Which words change between the friend and the colleague versions?','Find the mesóclise in the Portuguese client version and the nominal construction in the German one.']}},
+
+/* ================= C1-04 ================= */
+{id:'c1-04',title:'Bureaucracy, law & contracts',icon:'📜',
+intro:'Dealing with Finanças and the Bürgeramt, reading a contract, understanding a letter from an authority. Official German has its own grammar habits; Portuguese bureaucracy has its own vocabulary and acronyms.',
+vocab:[
+{en:'tax office',pt:'as Finanças / a Autoridade Tributária',de:'das Finanzamt',icon:'🏛️',pos:'noun'},
+{en:'tax number',pt:'o NIF (número de identificação fiscal)',de:'die Steuernummer / die Steuer-ID',icon:'🔢',pos:'noun',note:'PT: the NIF is asked for everywhere, even at the supermarket (“contribuinte?”).'},
+{en:'residents’ registration office',pt:'a Junta de Freguesia / a Câmara Municipal',de:'das Bürgeramt / das Einwohnermeldeamt',icon:'🏢',pos:'noun',note:'DE: Anmeldung (registering your address) within two weeks of moving is compulsory.'},
+{en:'to register one’s address',pt:'registar a morada / fazer o atestado de residência',de:'sich anmelden',icon:'📍'},
+{en:'social security',pt:'a Segurança Social',de:'die Sozialversicherung',icon:'🛡️',pos:'noun'},
+{en:'health insurance',pt:'o seguro de saúde / o SNS',de:'die Krankenversicherung',icon:'🏥',pos:'noun'},
+{en:'tax return',pt:'a declaração de IRS',de:'die Steuererklärung',icon:'📑',pos:'noun'},
+{en:'VAT',pt:'o IVA',de:'die Mehrwertsteuer (MwSt.) / die Umsatzsteuer',icon:'🧾',pos:'noun'},
+{en:'deed (property)',pt:'a escritura',de:'der notarielle Kaufvertrag / die Urkunde',icon:'🏠',pos:'noun'},
+{en:'notary',pt:'o notário / a notária',de:'der Notar / die Notarin',icon:'🖋️',pos:'noun'},
+{en:'mortgage',pt:'o crédito à habitação',de:'die Hypothek / der Immobilienkredit',icon:'🏦',pos:'noun'},
+{en:'clause',pt:'a cláusula',de:'die Klausel / der Paragraph',icon:'§',pos:'noun'},
+{en:'party (to a contract)',pt:'a parte / o outorgante',de:'die Vertragspartei',icon:'🤝',pos:'noun'},
+{en:'liability',pt:'a responsabilidade (civil)',de:'die Haftung',icon:'⚖️',pos:'noun'},
+{en:'warranty',pt:'a garantia',de:'die Gewährleistung / die Garantie',icon:'🛡️',pos:'noun'},
+{en:'penalty',pt:'a penalização / a coima',de:'die Vertragsstrafe / das Bußgeld',icon:'💸',pos:'noun',note:'PT: coima = administrative fine.'},
+{en:'deadline / time limit',pt:'o prazo',de:'die Frist',icon:'⏰',pos:'noun'},
+{en:'to comply with',pt:'cumprir',de:'einhalten / erfüllen',icon:'✅'},
+{en:'to breach',pt:'violar / incumprir',de:'verletzen / verstoßen gegen',icon:'❌'},
+{en:'to appeal',pt:'recorrer',de:'Einspruch einlegen / Widerspruch einlegen',icon:'📨'},
+{en:'binding',pt:'vinculativo',de:'verbindlich',icon:'🔗'},
+{en:'hereby',pt:'pelo presente / por este meio',de:'hiermit',icon:'📝'},
+{en:'without prejudice to',pt:'sem prejuízo de',de:'unbeschadet',icon:'🛡️'},
+{en:'in accordance with',pt:'nos termos de / em conformidade com',de:'gemäß / nach Maßgabe',icon:'📏'},
+{en:'the undersigned',pt:'o abaixo assinado / a abaixo assinada',de:'der/die Unterzeichnete',icon:'✍️'}
+],
+phrases:[
+{en:'You must register your address within two weeks.',pt:'Tem de registar a morada no prazo de duas semanas.',de:'Sie müssen sich innerhalb von zwei Wochen anmelden.'},
+{en:'Please bring your ID and proof of address.',pt:'Traga o documento de identificação e um comprovativo de morada.',de:'Bitte bringen Sie Ihren Ausweis und eine Meldebescheinigung mit.'},
+{en:'The parties agree as follows.',pt:'As partes acordam o seguinte.',de:'Die Parteien vereinbaren Folgendes.'},
+{en:'The tenant is liable for damage caused by negligence.',pt:'O inquilino é responsável pelos danos causados por negligência.',de:'Der Mieter haftet für fahrlässig verursachte Schäden.'},
+{en:'An appeal may be lodged within thirty days.',pt:'Pode ser interposto recurso no prazo de trinta dias.',de:'Gegen diesen Bescheid kann innerhalb von dreißig Tagen Widerspruch eingelegt werden.'},
+{en:'This offer is not binding.',pt:'Esta proposta não é vinculativa.',de:'Dieses Angebot ist unverbindlich.'}
+],
+grammar:[
+{title:'Passive substitutes: lässt sich, ist zu, -bar / pode-se, é de, -vel',en:'Official and technical text avoids the plain passive with alternatives. German: sich lassen + infinitive (can be), sein + zu + infinitive (must/can be), -bar adjectives. Portuguese: pode-se / é possível, ser de + infinitive, -vel adjectives.',
+pt:'O formulário pode preencher-se online. O prazo é de respeitar / deve ser respeitado. A taxa é reembolsável. É de notar que… (it should be noted that). Trata-se de (it is a matter of).',
+de:'Das Formular lässt sich online ausfüllen (= kann ausgefüllt werden). Die Frist ist einzuhalten (= muss eingehalten werden). Die Gebühr ist erstattbar. Es handelt sich um (it is a matter of).',
+examples:[
+{en:'The form can be filled in online.',pt:'O formulário [pode] preencher-se online.',de:'Das Formular [lässt] sich online ausfüllen.'},
+{en:'The deadline must be observed.',pt:'O prazo [deve] ser respeitado.',de:'Die Frist [ist] einzuhalten.'},
+{en:'The fee is refundable.',pt:'A taxa é [reembolsável].',de:'Die Gebühr ist [erstattbar].'},
+{en:'It should be noted that the clause is binding.',pt:'[É] de notar que a cláusula é vinculativa.',de:'Es [ist] darauf hinzuweisen, dass die Klausel verbindlich ist.'},
+{en:'This is a formal error.',pt:'[Trata-se] de um erro formal.',de:'Es [handelt] sich um einen Formfehler.'}
+]},
+{title:'Amtsdeutsch and burocratês: decoding long noun chains',en:'Official German stacks nouns and genitives (die Verlängerung der Frist zur Einreichung der Unterlagen). Official Portuguese stacks de-phrases and uses the compound future subjunctive and “caso” constructions. The reading strategy is the same: find the head noun, then unpack from right to left.',
+pt:'o pedido de prorrogação do prazo de entrega dos documentos = the request for extension of the deadline for delivery of the documents. Compound future subjunctive: se o requerente não tiver entregado (if the applicant has not delivered), caso o pagamento não tenha sido efetuado.',
+de:'der Antrag auf Verlängerung der Frist zur Einreichung der Unterlagen. Head noun first (Antrag), then each genitive/prepositional phrase. Also: Compound nouns: Aufenthaltserlaubnis (Aufenthalt + Erlaubnis), Einkommensteuererklärung, Meldebescheinigung.',
+examples:[
+{en:'residence permit',pt:'a autorização de [residência]',de:'die [Aufenthaltserlaubnis]'},
+{en:'income tax return',pt:'a declaração de [IRS]',de:'die [Einkommensteuererklärung]'},
+{en:'If the applicant has not submitted the documents…',pt:'Se o requerente não [tiver] entregado os documentos…',de:'Sofern der Antragsteller die Unterlagen nicht eingereicht [hat]…'},
+{en:'the extension of the deadline for submission',pt:'a prorrogação do [prazo] de entrega',de:'die Verlängerung der [Frist] zur Einreichung'},
+{en:'In case payment has not been made…',pt:'Caso o pagamento não [tenha] sido efetuado…',de:'Falls die Zahlung nicht erfolgt [ist]…'}
+]}
+],
+reading:{title:'Letter from an authority',intro:'A fictional official letter, the kind that arrives in a brown envelope. Decode the structure in your target language.',
+en:'Subject: Reminder, registration of residence\nDear Mr Costa,\nAccording to our records, you moved into the address stated above on 1 October 2026. Under Section 17 of the Federal Registration Act, every person who moves into a dwelling is required to register with the registration authority within two weeks of moving in. No registration has been received to date.\nYou are hereby requested to register in person at the Citizens’ Office by 30 November 2026 at the latest, bringing a valid identity document and the landlord’s confirmation of residence. Should you fail to register within this period, a fine of up to one thousand euros may be imposed in accordance with Section 54 of the Act.\nIf you have already registered in the meantime, please disregard this letter. An objection to this notice may be lodged in writing within one month of receipt.\nYours faithfully,\nCitizens’ Office, Registration Department',
+pt:'Assunto: Aviso, registo de residência\nExmo. Senhor Costa,\nDe acordo com os nossos registos, V. Exa. passou a residir na morada acima indicada em 1 de outubro de 2026. Nos termos do artigo 17.º da Lei Federal do Registo de Residentes, qualquer pessoa que passe a habitar um alojamento é obrigada a registar-se junto da autoridade competente no prazo de duas semanas após a mudança. Até à data não foi recebido qualquer registo.\nFica V. Exa. pelo presente notificado para proceder ao registo presencial no Balcão do Cidadão até 30 de novembro de 2026, o mais tardar, fazendo-se acompanhar de documento de identificação válido e da declaração do senhorio comprovativa da residência. Caso o registo não seja efetuado dentro deste prazo, poderá ser aplicada uma coima até mil euros, em conformidade com o artigo 54.º da referida Lei.\nSe entretanto já tiver efetuado o registo, queira desconsiderar a presente carta. Da presente notificação cabe reclamação por escrito no prazo de um mês a contar da receção.\nCom os melhores cumprimentos,\nBalcão do Cidadão, Serviço de Registo',
+de:'Betreff: Erinnerung, Anmeldung des Wohnsitzes\nSehr geehrter Herr Costa,\nnach unseren Unterlagen sind Sie am 1. Oktober 2026 in die oben genannte Anschrift eingezogen. Gemäß § 17 des Bundesmeldegesetzes ist jede Person, die eine Wohnung bezieht, verpflichtet, sich innerhalb von zwei Wochen nach dem Einzug bei der Meldebehörde anzumelden. Eine Anmeldung ist bisher nicht eingegangen.\nSie werden hiermit aufgefordert, sich bis spätestens 30. November 2026 persönlich im Bürgeramt anzumelden und dabei ein gültiges Ausweisdokument sowie die Wohnungsgeberbestätigung vorzulegen. Sollten Sie die Anmeldung nicht fristgerecht vornehmen, kann gemäß § 54 des Gesetzes ein Bußgeld von bis zu eintausend Euro verhängt werden.\nSofern Sie sich zwischenzeitlich bereits angemeldet haben, betrachten Sie dieses Schreiben bitte als gegenstandslos. Gegen diesen Bescheid kann innerhalb eines Monats nach Zugang schriftlich Widerspruch eingelegt werden.\nMit freundlichen Grüßen\nBürgeramt, Abteilung Meldewesen',
+questions:['What two documents must be brought?','What is the maximum fine, and under which section?','Find “should you fail to…” in your target language and identify the verb form.']}},
+
+/* ================= C1-05 ================= */
+{id:'c1-05',title:'Variation: Portugal vs Brazil, Germany vs Austria & Switzerland',icon:'🗺️',
+intro:'Knowing the standard is not enough: media, colleagues and family speak varieties. This unit maps the main differences so you recognise them, and so you both keep the European Portuguese and German-German forms the course teaches.',
+vocab:[
+{en:'bus (PT / BR)',pt:'o autocarro / o ônibus (BR)',de:'der Bus',icon:'🚌',pos:'noun'},
+{en:'train (PT / BR)',pt:'o comboio / o trem (BR)',de:'der Zug',icon:'🚆',pos:'noun'},
+{en:'mobile (PT / BR)',pt:'o telemóvel / o celular (BR)',de:'das Handy / das Natel (CH)',icon:'📱',pos:'noun',note:'CH: Natel is uniquely Swiss.'},
+{en:'breakfast (PT / BR)',pt:'o pequeno-almoço / o café da manhã (BR)',de:'das Frühstück / das Morgenessen (CH)',icon:'🥐',pos:'noun'},
+{en:'ice cream (PT / BR)',pt:'o gelado / o sorvete (BR)',de:'das Eis / die Glace (CH)',icon:'🍦',pos:'noun'},
+{en:'juice (PT / BR)',pt:'o sumo / o suco (BR)',de:'der Saft',icon:'🧃',pos:'noun'},
+{en:'bathroom (PT / BR)',pt:'a casa de banho / o banheiro (BR)',de:'das Badezimmer / das WC',icon:'🚽',pos:'noun'},
+{en:'girl (PT / BR)',pt:'a rapariga / a menina, a garota (BR)',de:'das Mädchen / das Madl (AT)',icon:'👧',pos:'noun',note:'PT: rapariga is neutral in Portugal and offensive in Brazil.'},
+{en:'cool (PT / BR)',pt:'fixe / legal (BR)',de:'cool / leiwand (AT)',icon:'😎'},
+{en:'tomato (DE / AT)',pt:'o tomate',de:'die Tomate / der Paradeiser (AT)',icon:'🍅',pos:'noun'},
+{en:'potato (DE / AT)',pt:'a batata',de:'die Kartoffel / der Erdapfel (AT)',icon:'🥔',pos:'noun'},
+{en:'bread roll (regional)',pt:'o pãozinho / a carcaça',de:'das Brötchen / die Semmel (south, AT) / das Weckle (SW) / die Schrippe (Berlin)',icon:'🥖',pos:'noun'},
+{en:'January (DE / AT)',pt:'janeiro',de:'der Januar / der Jänner (AT)',icon:'❄️'},
+{en:'hello (regional)',pt:'olá / oi (BR)',de:'hallo / Grüß Gott (south, AT) / Grüezi (CH) / Moin (north)',icon:'👋'},
+{en:'goodbye (regional)',pt:'adeus, tchau / tchau (BR)',de:'tschüss / Servus (AT, Bavaria) / Ade (CH, SW)',icon:'✌️'},
+{en:'queue (PT / BR)',pt:'a fila / a bicha (older PT)',de:'die Schlange',icon:'🧍‍🧍',pos:'noun',note:'PT: bicha for queue is old-fashioned in Portugal and offensive in Brazil; use fila.'},
+{en:'cupboard (DE / AT)',pt:'o armário',de:'der Schrank / der Kasten (AT)',icon:'🗄️',pos:'noun'},
+{en:'to park (DE / CH)',pt:'estacionar',de:'parken / parkieren (CH)',icon:'🅿️'},
+{en:'ß (DE / CH)',pt:'não existe em português',de:'Straße / Strasse (CH)',icon:'🔤',note:'Switzerland does not use ß; it writes ss everywhere.'},
+{en:'accent / variety',pt:'o sotaque / a variante',de:'der Akzent / die Varietät',icon:'🎙️',pos:'noun'},
+{en:'dialect',pt:'o dialeto',de:'der Dialekt / die Mundart',icon:'🗣️',pos:'noun'},
+{en:'standard language',pt:'a norma / o padrão',de:'das Hochdeutsch / die Standardsprache',icon:'📏',pos:'noun'}
+],
+phrases:[
+{en:'I’m speaking to you. (PT vs BR)',pt:'Estou a falar contigo. / Estou falando com você. (BR)',de:'Ich rede mit dir.'},
+{en:'Give me that. (PT vs BR pronoun placement)',pt:'Dá-me isso. / Me dá isso. (BR)',de:'Gib mir das.'},
+{en:'I’ve been in the garden. (north vs south DE)',pt:'Estive no jardim.',de:'Ich war im Garten. (north) / Ich bin im Garten gewesen. (south, AT)'},
+{en:'Good day. (regional German)',pt:'Bom dia.',de:'Guten Tag. / Grüß Gott. / Grüezi. / Moin.'},
+{en:'Do you understand Swiss German?',pt:'Percebes suíço-alemão?',de:'Verstehst du Schweizerdeutsch?'},
+{en:'In Brazil they say “você”, in Portugal “tu”.',pt:'No Brasil diz-se «você», em Portugal «tu».',de:'In Brasilien sagt man „você“, in Portugal „tu“.'}
+],
+grammar:[
+{title:'Portugal vs Brazil: the grammatical differences that matter',en:'Beyond vocabulary, European and Brazilian Portuguese differ in pronoun placement, the progressive form, the second person, and some spelling. Knowing them lets you understand Brazilian media while speaking like Portugal.',
+pt:'Progressive: estou a falar (PT) vs estou falando (BR). Pronouns: dá-me (PT) vs me dá (BR); vejo-te vs te vejo. Second person: tu + 2nd-person verb (PT) vs você + 3rd-person verb (most of BR); PT uses você sparingly and often avoids the word. Object “you”: PT te / o/a; BR te or você. Vocabulary and some spellings also differ (facto PT / fato BR). Pronunciation: PT reduces unstressed vowels heavily; BR keeps them open.',
+de:'(For German the equivalent map is in the next point.)',
+examples:[
+{en:'I am eating.',pt:'Estou [a] comer. (BR: estou comendo)',de:'Ich esse [gerade].'},
+{en:'I love you.',pt:'[Amo-te]. (BR: te amo / amo você)',de:'Ich liebe [dich].'},
+{en:'Do you want coffee? (to a friend)',pt:'[Queres] café? (BR: você quer café?)',de:'[Willst] du Kaffee?'},
+{en:'Call me tomorrow.',pt:'[Liga-me] amanhã. (BR: me liga amanhã)',de:'[Ruf] mich morgen an.'},
+{en:'It is a fact.',pt:'É um [facto]. (BR: fato)',de:'Das ist eine [Tatsache].'}
+]},
+{title:'Germany vs Austria vs Switzerland: what changes',en:'Standard German has three national standards. Differences are mostly lexical (food, administration), partly grammatical (Perfekt vs Präteritum, gender of some nouns, sein with sitzen/stehen/liegen in the south), and strongly phonetic. Swiss German dialect is a different matter: Swiss people write standard German but speak dialect.',
+pt:'(The Portuguese map is in the previous point.)',
+de:'Perfekt dominates in the south and Austria even for sein/haben: ich bin gewesen rather than ich war. South/AT: ich bin gesessen / gestanden / gelegen (DE north: ich habe gesessen). Gender: das E-Mail (AT) vs die E-Mail (DE); der Butter (regional south) vs die Butter. Austria: Jänner, Paradeiser, Erdapfel, Sackerl (bag), Marille (apricot), Topfen (quark). Switzerland: no ß, Velo (bike), Natel, parkieren, grillieren, Billett, Trottoir, Grüezi; -li diminutive (Müesli).',
+examples:[
+{en:'I sat in the garden. (north / south)',pt:'Estive sentado no jardim.',de:'Ich habe im Garten gesessen. / Ich [bin] im Garten gesessen. (AT, south)'},
+{en:'I ride my bike to work. (DE / CH)',pt:'Vou de bicicleta para o trabalho.',de:'Ich fahre mit dem Fahrrad / mit dem [Velo] (CH) zur Arbeit.'},
+{en:'I got an email. (DE / AT)',pt:'Recebi um email.',de:'Ich habe eine E-Mail / [ein] E-Mail (AT) bekommen.'},
+{en:'In January it snows. (DE / AT)',pt:'Em janeiro neva.',de:'Im Januar / im [Jänner] (AT) schneit es.'},
+{en:'A bag of apricots, please. (AT)',pt:'Um saco de alperces, por favor.',de:'Ein [Sackerl] Marillen, bitte. (DE: eine Tüte Aprikosen)'}
+]}
+],
+reading:{title:'One language, several countries',intro:'A short expository text on variation. Note how each language talks about itself.',
+en:'Portuguese is the official language of nine countries, and the two largest varieties, European and Brazilian, have drifted apart in sound more than in writing. A Lisbon speaker swallows unstressed vowels, so that “telefone” comes out close to “tlfon”, while a speaker from São Paulo gives every syllable its weight. Grammar follows: Brazil has largely replaced “tu” with “você”, puts object pronouns before the verb, and says “estou falando” where Portugal says “estou a falar”. Television and music flow mainly from Brazil to Portugal, so the Portuguese understand Brazilian with ease, and the reverse is less often true.\nGerman is pluricentric too: Germany, Austria and Switzerland each have a recognised standard with its own dictionary entries. The written differences are small, a few hundred words and some endings, and an Austrian newspaper reads like a German one with “Jänner” and “Paradeiser” in it. The spoken difference is another story. Swiss German dialects are not mutually intelligible with northern German speech, and Swiss speakers switch to standard German for outsiders the way one switches to a second language. A learner who masters the standard will read everything and understand most of Germany; Austria and Switzerland take time and good will.',
+pt:'O português é língua oficial de nove países, e as duas maiores variantes, a europeia e a brasileira, afastaram-se mais no som do que na escrita. Um falante de Lisboa engole as vogais átonas, de modo que «telefone» sai quase como «tlfon», enquanto um falante de São Paulo dá peso a cada sílaba. A gramática acompanha: o Brasil substituiu em grande parte o «tu» por «você», coloca os pronomes antes do verbo e diz «estou falando» onde Portugal diz «estou a falar». A televisão e a música fluem sobretudo do Brasil para Portugal, pelo que os portugueses percebem o brasileiro com facilidade, e o inverso nem sempre é verdade.\nO alemão também é pluricêntrico: a Alemanha, a Áustria e a Suíça têm cada uma um padrão reconhecido, com entradas próprias no dicionário. As diferenças escritas são pequenas, algumas centenas de palavras e algumas terminações, e um jornal austríaco lê-se como um alemão com «Jänner» e «Paradeiser» pelo meio. A diferença falada é outra história. Os dialetos suíço-alemães não são mutuamente inteligíveis com a fala do norte da Alemanha, e os suíços mudam para o alemão padrão com estrangeiros como quem muda para uma segunda língua. Quem domina o padrão lê tudo e percebe a maior parte da Alemanha; a Áustria e a Suíça pedem tempo e boa vontade.',
+de:'Portugiesisch ist Amtssprache in neun Ländern, und die beiden größten Varietäten, die europäische und die brasilianische, haben sich im Klang stärker auseinanderentwickelt als in der Schrift. Ein Sprecher aus Lissabon verschluckt die unbetonten Vokale, sodass „telefone“ fast wie „tlfon“ klingt, während ein Sprecher aus São Paulo jeder Silbe ihr Gewicht gibt. Die Grammatik folgt: Brasilien hat „tu“ weitgehend durch „você“ ersetzt, stellt Objektpronomen vor das Verb und sagt „estou falando“, wo Portugal „estou a falar“ sagt. Fernsehen und Musik fließen vor allem von Brasilien nach Portugal, weshalb die Portugiesen Brasilianisch mühelos verstehen, während das Umgekehrte seltener zutrifft.\nDeutsch ist ebenfalls plurizentrisch: Deutschland, Österreich und die Schweiz haben jeweils einen anerkannten Standard mit eigenen Wörterbucheinträgen. Die schriftlichen Unterschiede sind klein, ein paar hundert Wörter und einige Endungen, und eine österreichische Zeitung liest sich wie eine deutsche mit „Jänner“ und „Paradeiser“ darin. Der gesprochene Unterschied ist eine andere Geschichte. Schweizerdeutsche Dialekte sind mit norddeutscher Sprache nicht gegenseitig verständlich, und Schweizer wechseln für Außenstehende ins Standarddeutsche wie in eine zweite Sprache. Wer den Standard beherrscht, liest alles und versteht den größten Teil Deutschlands; Österreich und die Schweiz brauchen Zeit und guten Willen.',
+questions:['Why do the Portuguese understand Brazilian more easily than the reverse?','What is the difference between written and spoken variation in German?','Which three grammatical differences between PT and BR are listed?']}}
+]});

@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Obrigado · Danke</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Layout: one column, phone-first; language colour encodes which language a word is in */
+  --bg:#f6f7f9; --panel:#ffffff; --ink:#15202b; --muted:#5d6b7a; --line:#dde3ea;
+  --accent:#1f4e79; --accent-ink:#ffffff;
+  --pt:#1e7b4c; --pt-soft:#e3f3ea;
+  --de:#a86a00; --de-soft:#fbefd6;
+  --en:#3a4a5c; --en-soft:#e9edf2;
+  --good:#1e7b4c; --bad:#b3261e; --warn:#a86a00;
+  --display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
+  --body:"Source Sans 3", "Segoe UI", Roboto, sans-serif;
+  --radius:12px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#121820; --panel:#1b232d; --ink:#eef2f6; --muted:#9aa8b6; --line:#2c3845;
+    --accent:#7fb3e0; --accent-ink:#0f1b26;
+    --pt:#6fcf97; --pt-soft:#1c3328;
+    --de:#f0b84a; --de-soft:#3a2d12;
+    --en:#c3cdd8; --en-soft:#232d38;
+    --good:#6fcf97; --bad:#ff8a80; --warn:#f0b84a;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121820; --panel:#1b232d; --ink:#eef2f6; --muted:#9aa8b6; --line:#2c3845;
+  --accent:#7fb3e0; --accent-ink:#0f1b26;
+  --pt:#6fcf97; --pt-soft:#1c3328;
+  --de:#f0b84a; --de-soft:#3a2d12;
+  --en:#c3cdd8; --en-soft:#232d38;
+  --good:#6fcf97; --bad:#ff8a80; --warn:#f0b84a;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.45}
+button{font:inherit;color:inherit;cursor:pointer}
+input{font:inherit;color:inherit}
+a{color:var(--accent)}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.15}
+h1{font-size:1.8rem;font-weight:800}
+h2{font-size:1.35rem;font-weight:700}
+h3{font-size:1.05rem;font-weight:700}
+.muted{color:var(--muted)}
+.small{font-size:.9rem}
+.wrap{max-width:860px;margin:0 auto;padding:0 16px 96px}
+header.top{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;gap:10px;padding:10px 16px;min-height:56px}
+.brand{font-family:var(--display);font-weight:800;font-size:1.1rem;letter-spacing:-.01em;display:flex;align-items:center;gap:8px}
+.brand .pt{color:var(--pt)}.brand .de{color:var(--de)}
+.spacer{flex:1}
+.btn{border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:8px 14px;font-weight:600;display:inline-flex;align-items:center;gap:6px;min-height:40px}
+.btn:hover{border-color:var(--accent)}
+.btn:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.btn.ghost{background:transparent}
+.btn.sm{padding:5px 10px;min-height:32px;font-size:.9rem}
+.btn[disabled]{opacity:.5;cursor:default}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.stack{display:flex;flex-direction:column;gap:12px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+.crumbs{display:flex;gap:6px;flex-wrap:wrap;font-size:.9rem;color:var(--muted);margin:14px 0 6px}
+.crumbs button{background:none;border:0;padding:0;color:var(--accent);font-weight:600}
+.pill{display:inline-flex;align-items:center;gap:4px;border-radius:999px;padding:2px 10px;font-size:.8rem;font-weight:700;letter-spacing:.02em}
+.pill.pt{background:var(--pt-soft);color:var(--pt)}
+.pill.de{background:var(--de-soft);color:var(--de)}
+.pill.en{background:var(--en-soft);color:var(--en)}
+.pill.lvl{background:var(--en-soft);color:var(--ink)}
+.bar{height:8px;background:var(--en-soft);border-radius:999px;overflow:hidden}
+.bar>i{display:block;height:100%;background:var(--accent);border-radius:999px;transition:width .3s}
+/* home */
+.hero{padding:22px 0 10px}
+.hero p{max-width:60ch}
+.levels{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.level{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px;text-align:left;display:flex;flex-direction:column;gap:8px}
+.level:hover{border-color:var(--accent)}
+.level .code{font-family:var(--display);font-size:2rem;font-weight:800;letter-spacing:-.02em}
+.units{display:flex;flex-direction:column;gap:10px}
+.unit{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;display:grid;grid-template-columns:44px 1fr auto;gap:12px;align-items:center;text-align:left}
+.unit:hover{border-color:var(--accent)}
+.unit .ico{font-size:1.7rem;line-height:1;text-align:center}
+.unit .meta{font-size:.85rem;color:var(--muted)}
+.unit .done{color:var(--good);font-weight:700}
+/* unit page */
+.tabs{display:flex;gap:6px;overflow-x:auto;padding:4px 0 8px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:7px 14px;font-weight:600;white-space:nowrap}
+.tab.active{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.viewmode{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.seg button{border:0;background:var(--panel);padding:6px 12px;font-weight:600;font-size:.9rem}
+.seg button.on{background:var(--accent);color:var(--accent-ink)}
+.vgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.vcard{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:12px;display:flex;flex-direction:column;gap:6px;position:relative}
+.vcard .ico{font-size:2.2rem;line-height:1.1}
+.vcard .en{font-weight:600;color:var(--en)}
+.w{font-family:var(--display);font-weight:700;font-size:1.2rem;line-height:1.2}
+.w.pt{color:var(--pt)}.w.de{color:var(--de)}
+.langseg button[data-lang].on{color:var(--bg)}
+.langseg button[data-lang="de"].on{background:var(--de)}
+.langseg button[data-lang="pt"].on{background:var(--pt)}
+.dual{display:flex;gap:10px;font-size:.85rem;font-weight:700;white-space:nowrap}
+.dual .de{color:var(--de)}.dual .pt{color:var(--pt)}
+.vcard .note{font-size:.85rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:6px;margin-top:2px}
+.vcard.known{border-color:var(--good)}
+.vcard .tools{position:absolute;top:8px;right:8px;display:flex;gap:4px}
+.iconbtn{border:1px solid var(--line);background:var(--panel);border-radius:8px;width:30px;height:30px;display:inline-flex;align-items:center;justify-content:center;font-size:.95rem;padding:0}
+.iconbtn.on{background:var(--good);color:#fff;border-color:var(--good)}
+.iconbtn.flag.on{background:var(--warn);border-color:var(--warn)}
+table.tri{width:100%;border-collapse:collapse;background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+.tablewrap{overflow-x:auto;border-radius:var(--radius)}
+table.tri th,table.tri td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+table.tri th{font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--en-soft)}
+table.tri td.pt{color:var(--pt);font-weight:600}table.tri td.de{color:var(--de);font-weight:600}
+table.tri td.ico{font-size:1.4rem;width:40px}
+.phrase{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;display:grid;gap:4px;position:relative}
+.phrase .en{color:var(--en);font-weight:600}
+.gram{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px;display:flex;flex-direction:column;gap:10px}
+.gram .explain{max-width:68ch}
+.gram .lang{border-left:4px solid var(--line);padding:6px 12px;border-radius:4px}
+.gram .lang.pt{border-color:var(--pt);background:var(--pt-soft)}
+.gram .lang.de{border-color:var(--de);background:var(--de-soft)}
+.gram .lang b{display:block;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;margin-bottom:2px}
+.ex{display:grid;gap:2px;padding:8px 0;border-top:1px dashed var(--line)}
+.ex .en{color:var(--en)}
+.ex .pt{color:var(--pt)}.ex .de{color:var(--de)}
+.ex mark{background:transparent;color:inherit;font-weight:800;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
+.reading{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+.reading .cols{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:700px){.reading .cols{grid-template-columns:1fr 1fr 1fr}}
+.reading .col{padding:10px;border-radius:8px;background:var(--bg)}
+.reading .col p{margin:0 0 10px;max-width:65ch}
+.reading .col.pt{border-top:3px solid var(--pt)}.reading .col.de{border-top:3px solid var(--de)}.reading .col.en{border-top:3px solid var(--en)}
+.reading .col b{display:block;font-size:.8rem;letter-spacing:.04em;text-transform:uppercase;margin-bottom:6px}
+/* practice */
+.exmenu{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px}
+.exbtn{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:14px;text-align:left;display:flex;flex-direction:column;gap:4px}
+.exbtn:hover{border-color:var(--accent)}
+.exbtn .t{font-family:var(--display);font-weight:700}
+.exbtn .s{font-size:.85rem;color:var(--muted)}
+.exbtn .best{font-size:.85rem;color:var(--good);font-weight:700}
+.session{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px;display:flex;flex-direction:column;gap:14px;min-height:300px}
+.session .q{font-size:1.15rem}
+.session .q .ico{font-size:2.6rem;display:block;margin-bottom:6px}
+.session .prompt{font-family:var(--display);font-weight:700;font-size:1.4rem}
+.choices{display:grid;gap:8px}
+.choice{border:1px solid var(--line);background:var(--bg);border-radius:10px;padding:12px 14px;text-align:left;font-size:1.05rem;min-height:48px}
+.choice.ok{border-color:var(--good);background:color-mix(in srgb,var(--good) 15%,var(--panel))}
+.choice.ko{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 15%,var(--panel))}
+.typein{display:flex;gap:8px}
+.typein input{flex:1;border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--bg);font-size:1.1rem;min-width:0}
+.feedback{padding:10px 12px;border-radius:10px;font-weight:600}
+.feedback.ok{background:color-mix(in srgb,var(--good) 15%,var(--panel));color:var(--good)}
+.feedback.ko{background:color-mix(in srgb,var(--bad) 15%,var(--panel));color:var(--bad)}
+.feedback .ans{display:block;color:var(--ink);font-weight:400;margin-top:4px}
+.card3d{border:1px solid var(--line);border-radius:var(--radius);background:var(--bg);padding:24px 16px;min-height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:6px;cursor:pointer}
+.card3d .ico{font-size:3rem}
+.card3d .w{font-size:1.6rem}
+.chips{display:flex;flex-wrap:wrap;gap:8px;min-height:48px;padding:8px;border:1px dashed var(--line);border-radius:10px}
+.chip{border:1px solid var(--line);background:var(--panel);border-radius:8px;padding:8px 12px;font-size:1.05rem}
+.chip.pt{color:var(--pt)}.chip.de{color:var(--de)}
+.matchgrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.mcell{border:1px solid var(--line);background:var(--bg);border-radius:10px;padding:12px;min-height:52px;text-align:left}
+.mcell.sel{border-color:var(--accent);box-shadow:inset 0 0 0 2px var(--accent)}
+.mcell.gone{opacity:.25;pointer-events:none}
+.mcell.pt{color:var(--pt);font-weight:600}.mcell.de{color:var(--de);font-weight:600}
+.summary{text-align:center;padding:20px 0}
+.summary .score{font-family:var(--display);font-size:3rem;font-weight:800}
+.progressline{display:flex;align-items:center;gap:10px;font-size:.9rem;color:var(--muted)}
+.progressline .bar{flex:1}
+.search{display:flex;gap:8px}
+.search input{flex:1;border:1px solid var(--line);border-radius:10px;padding:10px 12px;background:var(--panel);min-width:0}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.45);display:flex;align-items:flex-end;justify-content:center;z-index:20;padding:0}
+.modal .box{background:var(--panel);border-radius:16px 16px 0 0;padding:18px;width:100%;max-width:640px;max-height:85vh;overflow:auto;display:flex;flex-direction:column;gap:12px}
+@media (min-width:640px){.modal{align-items:center;padding:16px}.modal .box{border-radius:16px}}
+textarea{width:100%;min-height:120px;border:1px solid var(--line);border-radius:10px;padding:10px;background:var(--bg);color:var(--ink);font:inherit;font-size:.9rem}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:999px;font-weight:600;z-index:30;opacity:0;transition:opacity .2s;pointer-events:none}
+.toast.show{opacity:1}
+.kbd{font-family:ui-monospace,monospace;font-size:.85em;background:var(--en-soft);padding:1px 6px;border-radius:4px}
+.footnote{font-size:.85rem;color:var(--muted);margin-top:30px;border-top:1px solid var(--line);padding-top:12px;max-width:70ch}
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <button class="brand" id="brandBtn" style="border:0;background:none;padding:0"><span>Obrigado</span><span class="muted">·</span><span class="de">Danke</span></button>
+  <div class="spacer"></div>
+  <span class="small muted" id="practiseLabel">Practise</span>
+  <div class="seg langseg" id="langSeg" role="group" aria-label="Practise language"><button data-lang="de">DE</button><button data-lang="pt">PT</button></div>
+  <button class="btn sm ghost" id="menuBtn" aria-label="Menu">☰</button>
+</div></header>
+<main class="wrap" id="app"></main>
+<div class="toast" id="toast"></div>
+
+<script>
+/*__DATA__*/
+</script>
+<script>
+(function(){
+'use strict';
+const LANGS={pt:{name:'Português (PT)',short:'PT',flag:'🇵🇹'},de:{name:'Deutsch (DE)',short:'DE',flag:'🇩🇪'},en:{name:'English',short:'EN',flag:'🇬🇧'}};
+const COURSE=window.COURSE_DATA||[];
+const $=(s,el)=>(el||document).querySelector(s);
+const app=$('#app');
+const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const shuffle=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;};
+const strip=s=>String(s).replace(/\[|\]/g,'');
+const markup=s=>esc(s).replace(/\[([^\]]+)\]/g,'<mark>$1</mark>');
+
+/* ---------- storage ---------- */
+const store={
+  get(k,d){try{const v=localStorage.getItem('odk:'+k);return v==null?d:JSON.parse(v);}catch(e){return d;}},
+  set(k,v){try{localStorage.setItem('odk:'+k,JSON.stringify(v));}catch(e){}}
+};
+const state={
+  lang:store.get('lang',null)||(store.get('who','de')==='pt'?'pt':'de'), // language used in Practice
+  view:store.get('view2','cards'), // cards | table
+  lenient:store.get('lenient',true),
+  progress:store.get('progress',{}), // keyed by practice language: {de:{unitId:{best,done}}, pt:{…}}
+  flags:store.get('flags',[]),
+  route:{page:'home'}
+};
+function save(){store.set('lang',state.lang);store.set('view2',state.view);store.set('lenient',state.lenient);store.set('progress',state.progress);store.set('flags',state.flags);}
+function target(){return state.lang;}
+function other(){return target()==='de'?'pt':'de';}
+function uprog(uid,lang){const L=lang||state.lang;const p=state.progress[L]||(state.progress[L]={});return p[uid]||(p[uid]={known:[],best:{}});}
+
+/* ---------- toast ---------- */
+let toastT;function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove('show'),1800);}
+
+/* ---------- routing ---------- */
+function go(r,push){state.route=r;render();window.scrollTo(0,0);if(r.page==='level'||r.page==='unit'){const h=r.page==='level'?r.level.toLowerCase():r.unit;if(location.hash!=='#'+h){try{history.replaceState(null,'','#'+h);}catch(e){}}}else if(location.hash){try{history.replaceState(null,'',' ');}catch(e){}}}
+function fromHash(){const h=(location.hash||'').replace('#','');if(!h)return {page:'home'};for(const L of COURSE){if(L.id.toLowerCase()===h)return {page:'level',level:L.id};for(const U of L.units){if(U.id===h)return {page:'unit',level:L.id,unit:U.id,tab:'learn'};}}return {page:'home'};}
+window.addEventListener('hashchange',()=>{state.route=fromHash();render();});
+
+/* ---------- helpers ---------- */
+function findUnit(uid){for(const L of COURSE){for(const U of L.units){if(U.id===uid)return {L,U};}}return null;}
+function unitItems(U){return [].concat(U.vocab||[]);}
+function levelProgress(L,lang){let total=0,done=0;for(const U of L.units){total++;if(uprog(U.id,lang).done)done++;}return {total,done};}
+function unitPct(U,lang){const p=uprog(U.id,lang);const av=EXERCISES.filter(e=>e.available(U));if(!av.length)return 0;const sum=av.reduce((s,e)=>s+Math.min(p.best[e.id]||0,70)/70,0);return Math.round(sum/av.length*100);}
+function unitStatus(U,lang){return uprog(U.id,lang).done?'✓':unitPct(U,lang)+'%';}
+function checkDone(U){const p=uprog(U.id);const exDone=EXERCISES.filter(e=>e.available(U)).every(e=>(p.best[e.id]||0)>=70);if(exDone&&!p.done){p.done=true;save();toast('Unit complete ✓');}}
+function isFlagged(key){return state.flags.some(f=>f.key===key);}
+function toggleFlag(key,text){const i=state.flags.findIndex(f=>f.key===key);if(i>=0){state.flags.splice(i,1);toast('Flag removed');}else{state.flags.push({key,text,who:LANGS[state.lang].short+' learner',when:new Date().toISOString().slice(0,10)});toast('Flagged for correction');}save();render();}
+
+/* ---------- normalisation for typing ---------- */
+const ARTICLES=/^(o|a|os|as|um|uma|uns|umas|der|die|das|den|dem|des|ein|eine|einen|einem|einer|eines)\s+/i;
+function norm(s,lenient){s=String(s).toLowerCase().trim().replace(/\s+/g,' ').replace(/[.!?,;:¡¿"“”]/g,'');s=s.replace(/\([^)]*\)/g,'').trim();if(lenient){s=s.normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/ß/g,'ss').replace(ARTICLES,'').replace(/\s+/g,' ').trim();}return s;}
+function answersOf(s){return String(s).split(' / ').map(x=>strip(x).trim()).filter(Boolean);}
+function matches(input,answer){const l=state.lenient;const a=norm(input,l);return answersOf(answer).some(x=>norm(x,l)===a);}
+
+/* ---------- render: shell ---------- */
+function render(){const r=state.route;document.querySelectorAll('#langSeg [data-lang]').forEach(b=>{const on=b.dataset.lang===state.lang;b.classList.toggle('on',on);b.setAttribute('aria-pressed',on);});
+  if(r.page==='home')renderHome();else if(r.page==='level')renderLevel(r.level);else if(r.page==='unit')renderUnit(r);else if(r.page==='search')renderSearch(r.q||'');else renderHome();}
+
+function crumbs(parts){return '<div class="crumbs">'+parts.map((p,i)=>i<parts.length-1?`<button data-go="${p.go}">${esc(p.t)}</button><span>›</span>`:`<span>${esc(p.t)}</span>`).join('')+'</div>';}
+
+/* ---------- home ---------- */
+function renderHome(){
+  const totalUnits=COURSE.reduce((n,L)=>n+L.units.length,0);
+  const totalVocab=COURSE.reduce((n,L)=>n+L.units.reduce((m,U)=>m+(U.vocab||[]).length,0),0);
+  app.innerHTML=`
+  <section class="hero stack">
+    <h1>One course, two targets, English in the middle.</h1>
+    <p class="muted">${totalUnits} units · ${totalVocab} words and phrases · A1 to C2. Every item is shown in English, <span style="color:var(--pt);font-weight:700">European Portuguese</span> and <span style="color:var(--de);font-weight:700">German</span>, so you both study the same page. The <b>DE / PT</b> switch at the top only decides which language the exercises ask for.</p>
+  </section>
+  <section class="stack" style="margin-top:8px">
+    <div class="row"><h2>Levels</h2><div class="spacer"></div><div class="search"><input id="searchInput" placeholder="Search a word in any language…" aria-label="Search"></div></div>
+    <div class="levels">
+      ${COURSE.map(L=>{const pd=levelProgress(L,'de'),pp=levelProgress(L,'pt');return `<button class="level" data-level="${L.id}">
+        <div class="row"><span class="code">${L.id}</span><span class="pill lvl">${esc(L.name)}</span></div>
+        <div class="small">${esc(L.canDo)}</div>
+        <div class="progressline"><span class="dual"><span class="de">DE</span></span><div class="bar"><i style="width:${Math.round(pd.done/pd.total*100)}%;background:var(--de)"></i></div><span>${pd.done}/${pd.total}</span></div>
+        <div class="progressline"><span class="dual"><span class="pt">PT</span></span><div class="bar"><i style="width:${Math.round(pp.done/pp.total*100)}%;background:var(--pt)"></i></div><span>${pp.done}/${pp.total}</span></div>
+        <div class="small muted">${L.units.length} units · ${L.units.reduce((m,U)=>m+(U.vocab||[]).length,0)} words${L.scaffold?' · scaffold: fewer exercises, expand later':''}</div>
+      </button>`;}).join('')}
+    </div>
+  </section>
+  <section class="footnote">
+    <p><b>How to use it together.</b> Pick one unit. Both read the Learn, Phrases and Grammar tabs: English, Portuguese and German side by side (switch to Table for a three-column list). Then each of you sets the switch at the top to your language and does the Practice tab. A unit counts as complete when every exercise is at 70% or better. Progress is kept separately for DE and PT, in this browser only; use Menu → Copy progress to move it to another phone.</p>
+    <p><b>Method and sources.</b> Level structure follows the CEFR “can-do” descriptors (Council of Europe). Unit topics follow the standard A1–C2 syllabus used by the Goethe-Institut (Start Deutsch, Goethe-Zertifikat) and by CAPLE/Camões for European Portuguese (CIPLE, DEPLE, DIPLE, DAPLE, DUPLE). Vocabulary was selected from frequency and learner lists and translated for this course; it has not yet been checked by a native speaker. Use the ⚑ flag on any item that looks wrong and export the flags from the menu so the item can be fixed.</p>
+  </section>`;
+  app.querySelectorAll('[data-level]').forEach(b=>b.onclick=()=>go({page:'level',level:b.dataset.level}));
+  $('#searchInput').onkeydown=e=>{if(e.key==='Enter'&&e.target.value.trim())go({page:'search',q:e.target.value.trim()});};
+}
+
+/* ---------- search ---------- */
+function renderSearch(q){const ql=norm(q,true);const hits=[];for(const L of COURSE)for(const U of L.units)for(const v of (U.vocab||[]).concat(U.phrases||[])){if(['en','pt','de'].some(k=>norm(v[k],true).includes(ql)))hits.push({L,U,v});}
+  app.innerHTML=crumbs([{t:'Home',go:'home'},{t:'Search'}])+`<h2>“${esc(q)}”</h2><p class="muted small">${hits.length} result${hits.length===1?'':'s'}</p>
+  <div class="tablewrap"><table class="tri"><thead><tr><th></th><th>English</th><th>Português</th><th>Deutsch</th><th>Unit</th></tr></thead><tbody>
+  ${hits.slice(0,200).map(h=>`<tr><td class="ico">${h.v.icon||''}</td><td>${esc(h.v.en)}</td><td class="pt">${esc(strip(h.v.pt))}</td><td class="de">${esc(strip(h.v.de))}</td><td><button class="btn sm" data-unit="${h.U.id}">${h.L.id} · ${esc(h.U.title)}</button></td></tr>`).join('')}
+  </tbody></table></div>`;
+  bindCommon();}
+
+/* ---------- level ---------- */
+function renderLevel(id){const L=COURSE.find(x=>x.id===id);if(!L)return renderHome();
+  app.innerHTML=crumbs([{t:'Home',go:'home'},{t:L.id}])+`
+  <div class="stack">
+    <div class="row"><h1>${L.id} <span class="muted" style="font-weight:500">${esc(L.name)}</span></h1></div>
+    <p class="muted" style="max-width:65ch;margin:0">${esc(L.canDo)}</p>
+    ${L.scaffold?`<div class="panel small"><b>Scaffold level.</b> ${esc(L.scaffold)}</div>`:''}
+    <div class="units">
+      ${L.units.map((U,i)=>`<button class="unit" data-unit="${U.id}">
+        <span class="ico">${U.icon||'📘'}</span>
+        <span><span style="font-weight:700">${i+1}. ${esc(U.title)}</span><br><span class="meta">${(U.vocab||[]).length} words · ${(U.phrases||[]).length} phrases · ${(U.grammar||[]).length} grammar${U.reading?' · reading':''}</span></span>
+        <span class="dual"><span class="de">DE ${unitStatus(U,'de')}</span><span class="pt">PT ${unitStatus(U,'pt')}</span></span>
+      </button>`).join('')}
+    </div>
+  </div>`;
+  bindCommon();}
+
+/* ---------- unit ---------- */
+function renderUnit(r){const f=findUnit(r.unit);if(!f)return renderHome();const {L,U}=f;const tab=r.tab||'learn';const t=target(),o=other();const p=uprog(U.id);
+  const tabs=[['learn','Learn'],['phrases','Phrases'],['grammar','Grammar']];if(U.reading)tabs.push(['reading','Reading']);tabs.push(['practice','Practice']);
+  let body='';
+  if(tab==='learn'){
+    const all=state.view==='table';
+    body=`<div class="row" style="justify-content:space-between">
+      <div class="seg" role="group" aria-label="View"><button class="${!all?'on':''}" data-view="cards">Cards</button><button class="${all?'on':''}" data-view="table">Table</button></div>
+      <span class="small muted">${U.vocab.length} words</span></div>
+    ${U.intro?`<p class="muted" style="max-width:65ch">${esc(U.intro)}</p>`:''}
+    ${all?`<div class="tablewrap"><table class="tri"><thead><tr><th></th><th>English</th><th>Português</th><th>Deutsch</th><th></th></tr></thead><tbody>
+      ${U.vocab.map((v,i)=>`<tr><td class="ico">${v.icon||''}</td><td>${esc(v.en)}${v.note?`<div class="small muted">${esc(v.note)}</div>`:''}</td><td class="pt">${esc(strip(v.pt))}</td><td class="de">${esc(strip(v.de))}</td><td><button class="iconbtn flag ${isFlagged(U.id+':v'+i)?'on':''}" data-flag="${U.id}:v${i}" data-ftext="${esc(v.en+' | '+v.pt+' | '+v.de)}" title="Flag as wrong">⚑</button></td></tr>`).join('')}
+      </tbody></table></div>`
+    :`<div class="vgrid">${U.vocab.map((v,i)=>`<div class="vcard">
+        <div class="tools"><button class="iconbtn flag ${isFlagged(U.id+':v'+i)?'on':''}" data-flag="${U.id}:v${i}" data-ftext="${esc(v.en+' | '+v.pt+' | '+v.de)}" title="Flag as wrong">⚑</button></div>
+        <div class="ico">${v.icon||'•'}</div>
+        <div class="en">${esc(v.en)}</div>
+        <div class="w pt" lang="pt-PT">${esc(strip(v.pt))}</div>
+        <div class="w de" lang="de-DE">${esc(strip(v.de))}</div>
+        ${v.note?`<div class="note">${esc(v.note)}</div>`:''}
+      </div>`).join('')}</div>`}`;
+  }else if(tab==='phrases'){
+    body=`<div class="stack">${(U.phrases||[]).map((v,i)=>`<div class="phrase">
+      <div class="tools" style="position:absolute;top:8px;right:8px"><button class="iconbtn flag ${isFlagged(U.id+':p'+i)?'on':''}" data-flag="${U.id}:p${i}" data-ftext="${esc(v.en+' | '+v.pt+' | '+v.de)}">⚑</button></div>
+      <div class="en">${esc(v.en)}</div>
+      <div class="w pt" lang="pt-PT">${esc(strip(v.pt))}</div>
+      <div class="w de" lang="de-DE">${esc(strip(v.de))}</div>
+      ${v.note?`<div class="small muted">${esc(v.note)}</div>`:''}
+    </div>`).join('')}</div>`;
+  }else if(tab==='grammar'){
+    body=`<div class="stack">${(U.grammar||[]).map((g,i)=>`<div class="gram">
+      <div class="row" style="justify-content:space-between"><h3>${esc(g.title)}</h3><button class="iconbtn flag ${isFlagged(U.id+':g'+i)?'on':''}" data-flag="${U.id}:g${i}" data-ftext="${esc('Grammar: '+g.title)}">⚑</button></div>
+      <div class="explain">${esc(g.en)}</div>
+      <div class="lang pt"><b>Português</b>${esc(g.pt)}</div>
+      <div class="lang de"><b>Deutsch</b>${esc(g.de)}</div>
+      ${g.table?renderGramTable(g.table):''}
+      <div>${(g.examples||[]).map(e=>`<div class="ex"><div class="en">${esc(e.en)}</div><div class="pt">${markup(e.pt)}</div><div class="de">${markup(e.de)}</div></div>`).join('')}</div>
+    </div>`).join('')}</div>`;
+  }else if(tab==='reading'&&U.reading){
+    const R=U.reading;const paras=k=>R[k].split('\n').map(x=>`<p>${esc(x)}</p>`).join('');
+    body=`<div class="reading"><h3>${esc(R.title)}</h3>${R.intro?`<p class="muted small">${esc(R.intro)}</p>`:''}
+      <div class="cols"><div class="col en"><b>English</b>${paras('en')}</div><div class="col pt"><b>Português</b>${paras('pt')}</div><div class="col de"><b>Deutsch</b>${paras('de')}</div></div>
+      ${R.questions?`<h3 style="margin-top:14px">Check your understanding</h3><ol>${R.questions.map(q=>`<li>${esc(q)}</li>`).join('')}</ol>`:''}</div>`;
+  }else if(tab==='practice'){
+    if(r.ex){body=`<div id="session"></div>`;}
+    else body=`<p class="muted small" style="margin-top:0">Practising <b style="color:var(--${t})">${LANGS[t].name}</b> (change with the DE / PT switch at the top). Reach 70% in each exercise to complete the unit. <label style="white-space:nowrap"><input type="checkbox" id="lenientChk" ${state.lenient?'checked':''}> accept missing accents/articles when typing</label></p>
+    <div class="exmenu">${EXERCISES.filter(e=>e.available(U)).map(e=>`<button class="exbtn" data-ex="${e.id}"><span class="t">${e.icon} ${e.name}</span><span class="s">${e.desc}</span>${p.best[e.id]!=null?`<span class="best">best ${p.best[e.id]}%</span>`:'<span class="s">not tried</span>'}</button>`).join('')}</div>`;
+  }
+  app.innerHTML=crumbs([{t:'Home',go:'home'},{t:L.id,go:'level:'+L.id},{t:U.title}])+`
+    <div class="row" style="align-items:flex-start;margin-bottom:6px"><span style="font-size:2rem;line-height:1">${U.icon||''}</span><div><h1 style="font-size:1.5rem">${esc(U.title)}</h1><div class="small muted">${L.id} · Unit ${L.units.indexOf(U)+1} of ${L.units.length} · <span class="dual" style="display:inline-flex"><span class="de">DE ${unitStatus(U,'de')}</span><span class="pt">PT ${unitStatus(U,'pt')}</span></span></div></div></div>
+    <div class="tabs">${tabs.map(([k,n])=>`<button class="tab ${tab===k?'active':''}" data-tab="${k}">${n}</button>`).join('')}</div>
+    ${body}
+    <div class="row" style="margin-top:24px;justify-content:space-between">${prevNext(L,U)}</div>`;
+  app.querySelectorAll('[data-tab]').forEach(b=>b.onclick=()=>go({...r,tab:b.dataset.tab,ex:null}));
+  app.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>{state.view=b.dataset.view;save();render();});
+  app.querySelectorAll('[data-ex]').forEach(b=>b.onclick=()=>go({...r,ex:b.dataset.ex}));
+  const lc=$('#lenientChk');if(lc)lc.onchange=()=>{state.lenient=lc.checked;save();};
+  bindCommon();
+  if(tab==='practice'&&r.ex)startSession(U,r.ex,r);
+}
+function renderGramTable(tb){return `<div class="tablewrap"><table class="tri"><thead><tr>${tb.head.map((h,i)=>`<th class="${i===1?'pt':i===2?'de':''}">${esc(h)}</th>`).join('')}</tr></thead><tbody>${tb.rows.map(row=>`<tr>${row.map((c,i)=>`<td class="${i===1?'pt':i===2?'de':''}">${esc(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;}
+function prevNext(L,U){const i=L.units.indexOf(U);const prev=L.units[i-1],next=L.units[i+1];let nextL=null;if(!next){const li=COURSE.indexOf(L);if(COURSE[li+1])nextL=COURSE[li+1];}
+  return `${prev?`<button class="btn" data-unit="${prev.id}">‹ ${esc(prev.title)}</button>`:'<span></span>'}${next?`<button class="btn primary" data-unit="${next.id}">${esc(next.title)} ›</button>`:nextL?`<button class="btn primary" data-level="${nextL.id}">Start ${nextL.id} ›</button>`:''}`;}
+function bindCommon(){
+  app.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>{const g=b.dataset.go;if(g==='home')go({page:'home'});else if(g.startsWith('level:'))go({page:'level',level:g.slice(6)});});
+  app.querySelectorAll('[data-unit]').forEach(b=>b.onclick=()=>{const f=findUnit(b.dataset.unit);if(f)go({page:'unit',level:f.L.id,unit:f.U.id,tab:'learn'});});
+  app.querySelectorAll('[data-level]').forEach(b=>b.onclick=()=>go({page:'level',level:b.dataset.level}));
+  app.querySelectorAll('[data-flag]').forEach(b=>b.onclick=e=>{e.stopPropagation();toggleFlag(b.dataset.flag,b.dataset.ftext);});
+}
+
+/* ---------- exercises ---------- */
+function clozeItems(U){const out=[];for(const g of (U.grammar||[]))for(const e of (g.examples||[])){const s=e[target()];const m=s.match(/\[([^\]]+)\]/);if(m)out.push({en:e.en,full:strip(s),answer:m[1],blank:s.replace(/\[[^\]]+\]/,'_____').replace(/\[|\]/g,'')});}return out;}
+function sentenceItems(U){const items=(U.phrases||[]).map(p=>({en:p.en,s:strip(p[target()]).split(' / ')[0]}));for(const g of (U.grammar||[]))for(const e of (g.examples||[]))items.push({en:e.en,s:strip(e[target()])});return items.filter(x=>x.s.split(' ').length>=3&&x.s.split(' ').length<=12);}
+const EXERCISES=[
+ {id:'flash',name:'Flashcards',icon:'🃏',desc:'See the English, recall the word, flip to check.',available:U=>(U.vocab||[]).length>=4,
+  build:U=>shuffle(U.vocab.map((v,i)=>({v,i}))).slice(0,20)},
+ {id:'mc',name:'Pick the word',icon:'🎯',desc:'English prompt, four options in your target.',available:U=>(U.vocab||[]).length>=4,
+  build:U=>shuffle(U.vocab).slice(0,12).map(v=>({v,opts:shuffle([v].concat(shuffle(U.vocab.filter(x=>x!==v)).slice(0,3)))}))},
+ {id:'mcrev',name:'Recognise it',icon:'👀',desc:'Target word shown, pick the English meaning.',available:U=>(U.vocab||[]).length>=4,
+  build:U=>shuffle(U.vocab).slice(0,12).map(v=>({v,opts:shuffle([v].concat(shuffle(U.vocab.filter(x=>x!==v)).slice(0,3)))}))},
+ {id:'type',name:'Type it',icon:'⌨️',desc:'Write the word in your target language.',available:U=>(U.vocab||[]).length>=4,
+  build:U=>shuffle(U.vocab).slice(0,10)},
+ {id:'match',name:'Match pairs',icon:'🔗',desc:'Tap an English word, then its translation.',available:U=>(U.vocab||[]).length>=6,
+  build:U=>{const rounds=[];const pool=shuffle(U.vocab);for(let i=0;i+6<=pool.length&&rounds.length<3;i+=6)rounds.push(pool.slice(i,i+6));return rounds;}},
+ {id:'cloze',name:'Fill the gap',icon:'✍️',desc:'Grammar sentences with one word missing.',available:U=>clozeItems(U).length>=4,
+  build:U=>{const all=clozeItems(U);return shuffle(all).slice(0,10).map(c=>({c,opts:shuffle([c.answer].concat(shuffle(all.map(x=>x.answer).filter(a=>a!==c.answer)).slice(0,3)))}));}},
+ {id:'order',name:'Build the sentence',icon:'🧩',desc:'Put the shuffled words back in order.',available:U=>sentenceItems(U).length>=4,
+  build:U=>shuffle(sentenceItems(U)).slice(0,8)}
+];
+
+function startSession(U,exId,r){const ex=EXERCISES.find(e=>e.id===exId);const box=$('#session');const items=ex.build(U);let idx=0,correct=0,total=0;const t=target(),o=other();
+  const finish=()=>{if(!box.isConnected)return;const pct=total?Math.round(correct/total*100):0;const p=uprog(U.id);if((p.best[exId]||0)<pct){p.best[exId]=pct;}save();checkDone(U);
+    box.innerHTML=`<div class="session"><div class="summary"><div class="score" style="color:${pct>=70?'var(--good)':'var(--warn)'}">${pct}%</div><div>${correct} of ${total} correct${pct>=70?' · passed':' · 70% needed, try again'}</div></div>
+      <div class="row" style="justify-content:center"><button class="btn" id="again">Try again</button><button class="btn primary" id="back">Back to exercises</button></div></div>`;
+    $('#again').onclick=()=>startSession(U,exId,r);$('#back').onclick=()=>go({...r,ex:null});};
+  const head=()=>`<div class="progressline"><button class="btn sm ghost" id="quit">✕</button><div class="bar"><i style="width:${Math.round(idx/items.length*100)}%"></i></div><span>${idx+1}/${items.length}</span></div>`;
+  const next=()=>{idx++;if(idx>=items.length)finish();else step();};
+  const step=()=>{
+    if(!box.isConnected)return;
+    const it=items[idx];
+    if(exId==='flash'){box.innerHTML=`<div class="session">${head()}<div class="card3d" id="card" tabindex="0" aria-label="Flashcard"><span class="ico">${it.v.icon||''}</span><span class="en" style="font-weight:600">${esc(it.v.en)}</span><span class="muted small">tap to reveal</span></div>
+        <div class="row" id="ctrls" style="justify-content:center"><button class="btn" id="reveal">Show answer</button></div></div>`;
+      let shown=false;const reveal=()=>{if(shown)return;shown=true;$('#card').innerHTML=`<span class="ico">${it.v.icon||''}</span><span class="w pt">${esc(strip(it.v.pt))}</span><span class="w de">${esc(strip(it.v.de))}</span><span class="small muted">${esc(it.v.en)}</span>${it.v.note?`<span class="small muted">${esc(it.v.note)}</span>`:''}`;
+        $('#ctrls').innerHTML=`<button class="btn" id="no">✗ Didn't know</button><button class="btn primary" id="yes">✓ Knew it</button>`;
+        $('#yes').onclick=()=>{correct++;total++;const k=uprog(U.id).known;if(!k.includes(it.i))k.push(it.i);next();};$('#no').onclick=()=>{total++;next();};};
+      $('#card').onclick=reveal;$('#reveal').onclick=reveal;}
+    else if(exId==='mc'||exId==='mcrev'){const rev=exId==='mcrev';box.innerHTML=`<div class="session">${head()}<div class="q"><span class="ico">${it.v.icon||''}</span><span class="muted small">${rev?'What does this mean?':'How do you say this in '+LANGS[t].name+'?'}</span><div class="prompt ${rev?t:''}" style="${rev?'color:var(--'+t+')':''}">${esc(rev?strip(it.v[t]):it.v.en)}</div></div>
+        <div class="choices">${it.opts.map((op,i)=>`<button class="choice" data-i="${i}">${esc(rev?op.en:strip(op[t]))}</button>`).join('')}</div><div id="fb"></div></div>`;
+      box.querySelectorAll('.choice').forEach(b=>b.onclick=()=>{const op=it.opts[+b.dataset.i];total++;const ok=op===it.v;if(ok)correct++;box.querySelectorAll('.choice').forEach((x,i)=>{x.disabled=true;if(it.opts[i]===it.v)x.classList.add('ok');else if(x===b&&!ok)x.classList.add('ko');});
+        $('#fb').innerHTML=`<div class="feedback ${ok?'ok':'ko'}">${ok?'Correct':'Not quite'}<span class="ans">${esc(it.v.en)} = <b style="color:var(--${t})">${esc(strip(it.v[t]))}</b> · <span style="color:var(--${o})">${esc(strip(it.v[o]))}</span></span></div><div class="row" style="justify-content:flex-end;margin-top:8px"><button class="btn primary" id="nx">Next ›</button></div>`;$('#nx').onclick=next;$('#nx').focus();});}
+    else if(exId==='type'){box.innerHTML=`<div class="session">${head()}<div class="q"><span class="ico">${it.icon||''}</span><span class="muted small">Type it in ${LANGS[t].name}${it.pos==='noun'?' (with the article)':''}</span><div class="prompt">${esc(it.en)}</div>${it.note?`<div class="small muted">${esc(it.note)}</div>`:''}</div>
+        <form class="typein" id="tf"><input id="ti" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Your answer"><button class="btn primary" type="submit">Check</button></form><div id="fb"></div></div>`;
+      const inp=$('#ti');inp.focus();$('#tf').onsubmit=e=>{e.preventDefault();if(inp.disabled)return;const val=inp.value;if(!val.trim())return;total++;const ok=matches(val,it[t]);if(ok)correct++;inp.disabled=true;
+        $('#fb').innerHTML=`<div class="feedback ${ok?'ok':'ko'}">${ok?'Correct':'Not quite'}<span class="ans"><b style="color:var(--${t})">${esc(strip(it[t]))}</b> · <span style="color:var(--${o})">${esc(strip(it[o]))}</span></span></div><div class="row" style="justify-content:flex-end;margin-top:8px">${ok?'':'<button class="btn" id="accept">I was right</button>'}<button class="btn primary" id="nx">Next ›</button></div>`;
+        $('#nx').onclick=next;$('#nx').focus();const ac=$('#accept');if(ac)ac.onclick=()=>{correct++;next();};};}
+    else if(exId==='match'){const pairs=it;const left=shuffle(pairs.map(v=>({v,side:'en'})));const right=shuffle(pairs.map(v=>({v,side:t})));let sel=null,left_=pairs.length,mist=0;
+      box.innerHTML=`<div class="session">${head()}<div class="muted small">Tap a pair: English on the left, ${LANGS[t].name} on the right.</div><div class="matchgrid" id="mg">${left.map((c,i)=>`<button class="mcell en" data-side="en" data-k="${pairs.indexOf(c.v)}">${esc(c.v.en)}</button><button class="mcell ${t}" data-side="t" data-k="${pairs.indexOf(right[i].v)}">${esc(strip(right[i].v[t]))}</button>`).join('')}</div></div>`;
+      box.querySelectorAll('.mcell').forEach(b=>b.onclick=()=>{if(sel&&sel.dataset.side===b.dataset.side){sel.classList.remove('sel');sel=b;b.classList.add('sel');return;}if(!sel){sel=b;b.classList.add('sel');return;}
+        if(sel.dataset.k===b.dataset.k){sel.classList.add('gone');b.classList.add('gone');sel.classList.remove('sel');sel=null;left_--;if(left_===0){total+=pairs.length;correct+=Math.max(0,pairs.length-mist);setTimeout(next,350);}}
+        else{mist++;sel.classList.add('ko');b.classList.add('ko');const a=sel;sel=null;setTimeout(()=>{a.classList.remove('sel','ko');b.classList.remove('ko');},450);}});}
+    else if(exId==='cloze'){box.innerHTML=`<div class="session">${head()}<div class="q"><span class="muted small">${esc(it.c.en)}</span><div class="prompt" style="color:var(--${t})">${esc(it.c.blank)}</div></div>
+        <div class="choices">${it.opts.map((op,i)=>`<button class="choice" data-i="${i}">${esc(op)}</button>`).join('')}</div><div id="fb"></div></div>`;
+      box.querySelectorAll('.choice').forEach(b=>b.onclick=()=>{const op=it.opts[+b.dataset.i];total++;const ok=op===it.c.answer;if(ok)correct++;box.querySelectorAll('.choice').forEach((x,i)=>{x.disabled=true;if(it.opts[i]===it.c.answer)x.classList.add('ok');else if(x===b&&!ok)x.classList.add('ko');});
+        $('#fb').innerHTML=`<div class="feedback ${ok?'ok':'ko'}">${ok?'Correct':'Not quite'}<span class="ans" style="color:var(--${t})">${esc(it.c.full)}</span></div><div class="row" style="justify-content:flex-end;margin-top:8px"><button class="btn primary" id="nx">Next ›</button></div>`;$('#nx').onclick=next;$('#nx').focus();});}
+    else if(exId==='order'){const words=it.s.split(' ');let pool=shuffle(words.map((w,i)=>({w,i})));if(pool.map(x=>x.w).join(' ')===it.s)pool=pool.reverse();let built=[];
+      const draw=()=>{$('#built').innerHTML=built.map((x,i)=>`<button class="chip ${t}" data-b="${i}">${esc(x.w)}</button>`).join('')||'<span class="muted small">tap words below</span>';$('#pool').innerHTML=pool.map((x,i)=>`<button class="chip" data-p="${i}">${esc(x.w)}</button>`).join('');
+        box.querySelectorAll('[data-p]').forEach(b=>b.onclick=()=>{built.push(pool.splice(+b.dataset.p,1)[0]);draw();});box.querySelectorAll('[data-b]').forEach(b=>b.onclick=()=>{pool.push(built.splice(+b.dataset.b,1)[0]);draw();});
+        $('#chk').disabled=pool.length>0;};
+      box.innerHTML=`<div class="session">${head()}<div class="q"><span class="muted small">Build this sentence in ${LANGS[t].name}</span><div class="prompt">${esc(it.en)}</div></div><div class="chips" id="built"></div><div class="chips" id="pool" style="border-style:solid"></div><div class="row" style="justify-content:flex-end"><button class="btn primary" id="chk">Check</button></div><div id="fb"></div></div>`;draw();
+      $('#chk').onclick=()=>{total++;const ok=built.map(x=>x.w).join(' ')===it.s;if(ok)correct++;$('#fb').innerHTML=`<div class="feedback ${ok?'ok':'ko'}">${ok?'Correct':'Not quite'}<span class="ans" style="color:var(--${t})">${esc(it.s)}</span></div><div class="row" style="justify-content:flex-end;margin-top:8px"><button class="btn primary" id="nx">Next ›</button></div>`;$('#chk').disabled=true;box.querySelectorAll('.chip').forEach(c=>c.disabled=true);$('#nx').onclick=next;$('#nx').focus();};}
+    $('#quit').onclick=()=>go({...r,ex:null});
+  };
+  if(!items.length){box.innerHTML='<div class="panel">Not enough material in this unit for this exercise.</div>';return;}
+  step();
+}
+
+/* ---------- menu / export ---------- */
+function openMenu(){const m=document.createElement('div');m.className='modal';m.innerHTML=`<div class="box" role="dialog" aria-label="Menu">
+  <div class="row" style="justify-content:space-between"><h2>Menu</h2><button class="btn sm" id="close">Close</button></div>
+  <div class="stack">
+    <div><b>Theme</b><div class="seg" style="margin-top:6px"><button data-th="">Auto</button><button data-th="light">Light</button><button data-th="dark">Dark</button></div></div>
+    <div><b>Progress</b><p class="small muted" style="margin:4px 0">Saved in this browser only. Copy it here and paste it on the other phone to move it.</p>
+      <div class="row"><button class="btn sm" id="exp">Copy progress</button><button class="btn sm" id="imp">Paste progress…</button><button class="btn sm" id="reset">Reset ${LANGS[state.lang].short} progress</button></div>
+      <textarea id="ta" placeholder="Paste exported progress here, then press Import" style="display:none"></textarea><button class="btn sm primary" id="doimp" style="display:none">Import</button></div>
+    <div><b>Flagged items (${state.flags.length})</b><p class="small muted" style="margin:4px 0">Items you marked ⚑ as wrong or doubtful. Copy the list and send it to Claude to get them fixed.</p>
+      <div class="row"><button class="btn sm" id="copyflags" ${state.flags.length?'':'disabled'}>Copy flags</button><button class="btn sm" id="clearflags" ${state.flags.length?'':'disabled'}>Clear flags</button></div>
+      ${state.flags.length?`<ul class="small" style="margin:8px 0 0;padding-left:18px">${state.flags.map(f=>`<li>${esc(f.text)} <span class="muted">(${esc(f.who)}, ${f.when})</span></li>`).join('')}</ul>`:''}</div>
+    <div class="small muted">Obrigado · Danke — a trilingual course for two. Content generated for private study; flag errors and they get corrected.</div>
+  </div></div>`;
+  document.body.appendChild(m);const close=()=>m.remove();$('#close',m).onclick=close;m.onclick=e=>{if(e.target===m)close();};
+  m.querySelectorAll('[data-th]').forEach(b=>b.onclick=()=>{const v=b.dataset.th;if(v)document.documentElement.setAttribute('data-theme',v);else document.documentElement.removeAttribute('data-theme');store.set('theme',v);});
+  const copy=async(txt,ok)=>{try{await navigator.clipboard.writeText(txt);toast(ok);}catch(e){const ta=$('#ta',m);ta.style.display='block';ta.value=txt;ta.select();toast('Select and copy the text');}};
+  $('#exp',m).onclick=()=>copy(JSON.stringify({progress:state.progress,flags:state.flags}),'Progress copied');
+  $('#imp',m).onclick=()=>{$('#ta',m).style.display='block';$('#doimp',m).style.display='inline-flex';$('#ta',m).value='';$('#ta',m).focus();};
+  $('#doimp',m).onclick=()=>{try{const d=JSON.parse($('#ta',m).value);if(d.progress)state.progress=Object.assign({},state.progress,d.progress);if(d.flags)state.flags=d.flags;save();render();toast('Imported');close();}catch(e){toast('That is not valid progress data');}};
+  $('#reset',m).onclick=()=>{if(m.dataset.confirm){delete state.progress[state.lang];save();render();toast('Progress reset');close();}else{m.dataset.confirm='1';$('#reset',m).textContent='Tap again to confirm';}};
+  $('#copyflags',m).onclick=()=>copy(state.flags.map(f=>`- [${f.who}, ${f.when}] ${f.text}`).join('\n'),'Flags copied');
+  $('#clearflags',m).onclick=()=>{state.flags=[];save();close();render();};
+}
+
+/* ---------- boot ---------- */
+(function(){const th=store.get('theme','');if(th)document.documentElement.setAttribute('data-theme',th);})();
+$('#brandBtn').onclick=()=>go({page:'home'});
+$('#menuBtn').onclick=openMenu;
+document.querySelectorAll('#langSeg [data-lang]').forEach(b=>b.onclick=()=>{if(state.lang===b.dataset.lang)return;state.lang=b.dataset.lang;save();const r=state.route;if(r.page==='unit'&&r.ex)state.route={...r,ex:null};render();toast('Practising '+LANGS[state.lang].name);});
+state.route=fromHash();render();
+})();
+</script>
+</body>
+</html>
